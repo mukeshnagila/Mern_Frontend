@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import "../Navbar/Nav.css";
-import Dropdown from "./Dropdown/Dropdown";
 import { NavLink } from "react-router-dom";
 
 function Nav(){

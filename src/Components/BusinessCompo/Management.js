@@ -26,7 +26,7 @@ function Management(){
                     <div className="mostpopcontent">
                                 
                                 <div className="Startmostpop_item">
-                                    <img className="Startmostpop_item_Img" src="https://img-c.udemycdn.com/course/240x135/14284_6833_17.jpg" alt="image" />
+                                    <img className="Startmostpop_item_Img" src="https://img-c.udemycdn.com/course/240x135/14284_6833_17.jpg" alt="Managementimage" />
                                     <h3>Powerful Business Writing: How to Write Concisely</h3>
                                     <p>Caroline McDevitt</p>
                                     <div className="subInfoRating">
@@ -54,7 +54,7 @@ function Management(){
                                 </div>
 
                                 <div className="Startmostpop_item">
-                                    <img className="Startmostpop_item_Img" src="https://img-c.udemycdn.com/course/240x135/14284_6833_17.jpg" alt="image" />
+                                    <img className="Startmostpop_item_Img" src="https://img-c.udemycdn.com/course/240x135/14284_6833_17.jpg" alt="Managementimage" />
                                     <h3>Powerful Business Writing: How to Write Concisely</h3>
                                     <p>Caroline McDevitt</p>
                                     <div className="subInfoRating">
@@ -82,7 +82,7 @@ function Management(){
                                 </div>
 
                                 <div className="Startmostpop_item">
-                                    <img className="Startmostpop_item_Img" src="https://img-c.udemycdn.com/course/240x135/14284_6833_17.jpg" alt="image" />
+                                    <img className="Startmostpop_item_Img" src="https://img-c.udemycdn.com/course/240x135/14284_6833_17.jpg" alt="Managementimage" />
                                     <h3>Powerful Business Writing: How to Write Concisely</h3>
                                     <p>Caroline McDevitt</p>
                                     <div className="subInfoRating">
@@ -110,7 +110,7 @@ function Management(){
                                 </div>
 
                                 <div className="Startmostpop_item">
-                                    <img className="Startmostpop_item_Img" src="https://img-c.udemycdn.com/course/240x135/14284_6833_17.jpg" alt="image" />
+                                    <img className="Startmostpop_item_Img" src="https://img-c.udemycdn.com/course/240x135/14284_6833_17.jpg" alt="Managementimage" />
                                     <h3>Powerful Business Writing: How to Write Concisely</h3>
                                     <p>Caroline McDevitt</p>
                                     <div className="subInfoRating">
@@ -144,17 +144,17 @@ function Management(){
                 <hr/>
                         <div className="ASchild1">
                                 <div className="ASmini">
-                                    <img className="ASmini_img" src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTJRacqYivS-UjxhOO4UPc3f3ryzORPIDByID2o7We26oiIEp5H" alt="Image" />
+                                    <img className="ASmini_img" src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTJRacqYivS-UjxhOO4UPc3f3ryzORPIDByID2o7We26oiIEp5H" alt="ManagementImage" />
                                     <h2 className="ASmini_H2">Learn in-demand skills with over 210,000 video courses</h2>
                                 </div>
 
                                 <div className="ASmini">
-                                    <img className="ASmini_img" src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTYLtySaxciI_EyNE3L5_LsDe8iUpXkykWl46N_faJqYhza_hmX" alt="Image" />
+                                    <img className="ASmini_img" src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTYLtySaxciI_EyNE3L5_LsDe8iUpXkykWl46N_faJqYhza_hmX" alt="ManagementImage" />
                                     <h2 className="ASmini_H2">Choose courses taught by real-world experts</h2>
                                 </div>
 
                                 <div className="ASmini">
-                                    <img className="ASmini_img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQTYkKsByAwOOOEo961Xlhj0Q87RgLIWJZCIP6omGLekWRLTFLH" alt="Image" />
+                                    <img className="ASmini_img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQTYkKsByAwOOOEo961Xlhj0Q87RgLIWJZCIP6omGLekWRLTFLH" alt="ManagementImage" />
                                     <h2 className="ASmini_H2">Learn at your own pace, with lifetime access on mobile and desktop</h2>
                                 </div>  
                         </div>
@@ -181,7 +181,7 @@ function Management(){
                 <h2>Popular Instructors</h2>
                 <div className="popular_Ins_item">
                         <div className="Ins_item_1">
-                                <img className="Ins_item_1_Img" src="https://img-c.udemycdn.com/user/75x75/2565950_892c_2.jpg" alt="image" />
+                                <img className="Ins_item_1_Img" src="https://img-c.udemycdn.com/user/75x75/2565950_892c_2.jpg" alt="Managementimage" />
                                 <div className="Ins_mini_item">
                                     <h3>TJ Walker</h3>
                                     <p>Communication Skills, Public Speaking</p>
@@ -192,7 +192,7 @@ function Management(){
                         </div>
 
                         <div className="Ins_item_1">
-                                <img className="Ins_item_1_Img" src="https://img-c.udemycdn.com/user/75x75/22101060_9158_2.jpg" alt="image" />
+                                <img className="Ins_item_1_Img" src="https://img-c.udemycdn.com/user/75x75/22101060_9158_2.jpg" alt="Managementimage" />
                                 <div className="Ins_mini_item">
                                     <h3>Jessica Brody</h3>
                                     <p>Fiction Writing, Creative Writing</p>
@@ -203,7 +203,7 @@ function Management(){
                         </div>
 
                         <div className="Ins_item_1">
-                                <img className="Ins_item_1_Img" src="https://img-c.udemycdn.com/user/75x75/1681918_d7a1_7.jpg" alt="image" />
+                                <img className="Ins_item_1_Img" src="https://img-c.udemycdn.com/user/75x75/1681918_d7a1_7.jpg" alt="Managementimage" />
                                 <div className="Ins_mini_item">
                                     <h3>Shani Raja</h3>
                                     <p>Writing, Writing Editing</p>
@@ -214,7 +214,7 @@ function Management(){
                         </div>
 
                         <div className="Ins_item_1">
-                                <img className="Ins_item_1_Img" src="	https://img-c.udemycdn.com/user/75x75/14942868_3ed6_38.jpg" alt="image" />
+                                <img className="Ins_item_1_Img" src="	https://img-c.udemycdn.com/user/75x75/14942868_3ed6_38.jpg" alt="Managementimage" />
                                 <div className="Ins_mini_item">
                                     <h3>TJ Walker</h3>
                                     <p>Chris Haroun | 1.4 Million Students |</p>
@@ -229,7 +229,7 @@ function Management(){
             <div className="allCcource">
                 <h2>All Communication courses</h2><br/>
                 <div className="fornotsure">
-                    <img className="fornotsureImg" src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRSK4XX5P0UrM-P8ULiT516j5e8Di-dH32AfbdEe7pHsqAPP0tB" alt="image" />
+                    <img className="fornotsureImg" src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRSK4XX5P0UrM-P8ULiT516j5e8Di-dH32AfbdEe7pHsqAPP0tB" alt="Managementimage" />
                     <h3>Not sure? All courses have a 30-day money-back guarantee</h3>
                 </div>    
             </div> 
@@ -293,7 +293,7 @@ function Management(){
                             <div className="forBLast_content">
                                 <div className="forBLast_content_item">
                                     <div className="forBLast_content_item1">
-                                            <img className="forBLast_content_item1_Img" src="https://img-c.udemycdn.com/course/240x135/1355610_375a_5.jpg" alt="image" />
+                                            <img className="forBLast_content_item1_Img" src="https://img-c.udemycdn.com/course/240x135/1355610_375a_5.jpg" alt="Managementimage" />
                                     </div>
 
                                         <div className="forBLast_content_item2">
@@ -321,7 +321,7 @@ function Management(){
 
                                 <div className="forBLast_content_item">
                                     <div className="forBLast_content_item1">
-                                            <img className="forBLast_content_item1_Img" src="https://img-c.udemycdn.com/course/240x135/1355610_375a_5.jpg" alt="image" />
+                                            <img className="forBLast_content_item1_Img" src="https://img-c.udemycdn.com/course/240x135/1355610_375a_5.jpg" alt="Managementimage" />
                                     </div>
 
                                         <div className="forBLast_content_item2">
@@ -349,7 +349,7 @@ function Management(){
 
                                 <div className="forBLast_content_item">
                                     <div className="forBLast_content_item1">
-                                            <img className="forBLast_content_item1_Img" src="https://img-c.udemycdn.com/course/240x135/1355610_375a_5.jpg" alt="image" />
+                                            <img className="forBLast_content_item1_Img" src="https://img-c.udemycdn.com/course/240x135/1355610_375a_5.jpg" alt="Managementimage" />
                                     </div>
 
                                         <div className="forBLast_content_item2">

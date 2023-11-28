@@ -9,7 +9,7 @@ import Management from "../Components/BusinessCompo/Management";
 import Strategy from "../Components/BusinessCompo/Strategy";
 import Operations from "../Components/BusinessCompo/Operations";
 import HumanR from "../Components/BusinessCompo/HumanR";
-import Finance_Accounting from "../MainComponent/Finance_Accounting";
+import FinanceAccounting from "../MainComponent/Finance_Accounting";
 
 function RouteingFile(){
     return(

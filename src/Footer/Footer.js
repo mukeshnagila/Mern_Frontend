@@ -40,14 +40,14 @@ function Footer(){
 
                         <div className="Fbox2">
                             <div className="FContent2">
-                                <button className="Fbutton"><span className="forfooterBTN"><img className="Fbutton_img" src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRu5BLsLk4yX2jDU3uzZlXbz-sMsDAGanqzMRHHulNfRweBvMh1" alt="img" />English</span></button>
+                                <button className="Fbutton"><span className="forfooterBTN"><img className="Fbutton_img" src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRu5BLsLk4yX2jDU3uzZlXbz-sMsDAGanqzMRHHulNfRweBvMh1" alt="Footerimg" />English</span></button>
                             </div>
                         </div>
                     </div><br/><br/><br/>
 
                     <div className="lastfooter">
                             <div className="LFooter1">
-                                 <img className="Lfooter_img" src="https://www.udemy.com/staticx/udemy/images/v7/logo-udemy-inverted.svg" alt="image" />
+                                 <img className="Lfooter_img" src="https://www.udemy.com/staticx/udemy/images/v7/logo-udemy-inverted.svg" alt="Footerimage" />
                             </div>
                             <div className="LFooter2">
                                 <p className="Lfooter_P">© 2023 Udemy, Inc.</p>

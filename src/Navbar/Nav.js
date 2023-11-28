@@ -39,17 +39,17 @@ function Nav(){
                                                         <div className="dropdown-content">
                                                             <ul>
                                                                 <li className="lionhover"><NavLink to="/Business/Communication">Communication</NavLink></li>
-                                                                <li className="lionhover">Managements</li>
-                                                                <li className="lionhover">Business Strategy</li>
-                                                                <li className="lionhover">Operations</li>
-                                                                <li className="lionhover">Human Resources</li>
+                                                                <li className="lionhover"><NavLink to="/Business/Managements">Managements</NavLink></li>
+                                                                <li className="lionhover"><NavLink to="/Business/Business_Strategy">Business Strategy</NavLink></li>
+                                                                <li className="lionhover"><NavLink to="/Business/Operations">Operations</NavLink></li>
+                                                                <li className="lionhover"><NavLink to="/Business/Human_Resources">Human Resources</NavLink></li>
                                                             </ul>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </li>
 
-                                            <li className="lionhover">Finance and Accounting
+                                            <li className="lionhover"><NavLink to="/Finance_Accounting">Finance and Accounting</NavLink>
                                                 <div className="business-dropdown">
                                                     <div className="start-2nddropdown">
                                                         <div className="dropdown-content">

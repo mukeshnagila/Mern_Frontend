@@ -8,11 +8,11 @@ function Business(){
             <div className="Nav2nd">
                 <h3>Business</h3>
                 <img className="Nav2nd_img" src="https://s.udemycdn.com/browse_components/link-bar/large-next.svg" alt="sign" />
-                <p><NavLink className="Nav2nd_P" to="/Business/Communication">Communication</NavLink></p>
-                <p className="Nav2nd_P">Managements</p>
-                <p className="Nav2nd_P">Business Strategy</p>
-                <p className="Nav2nd_P">Operations</p>
-                <p className="Nav2nd_P">Human Resources</p>
+                <p className="Nav2nd_P"><NavLink className="Nav2nd_P2" to="/Business/Communication">Communication</NavLink></p>
+                <p className="Nav2nd_P"><NavLink className="Nav2nd_P2" to="/Business/Managements">Managements</NavLink></p>
+                <p className="Nav2nd_P"><NavLink className="Nav2nd_P2" to="/Business/Business_Strategy">Business Strategy</NavLink></p>
+                <p className="Nav2nd_P"><NavLink className="Nav2nd_P2" to="/Business/Operations">Operations</NavLink></p>
+                <p className="Nav2nd_P"><NavLink className="Nav2nd_P2" to="/Business/Human_Resources">Human Resources</NavLink></p>
             </div>
 
             <div className="Communication">
@@ -164,16 +164,16 @@ function Business(){
             <div className="PopularSec">
                     <h2>Popular topics</h2>
                     <div className="popular_topic">
-                            <button className="popular_topic_Btn">Communication Skills</button>
-                            <button className="popular_topic_Btn">Communication Skills</button>
-                            <button className="popular_topic_Btn">Communication Skills</button>
-                            <button className="popular_topic_Btn">Communication Skills</button>
-                            <button className="popular_topic_Btn">Communication Skills</button>
-                            <button className="popular_topic_Btn">Communication Skills</button>
-                            <button className="popular_topic_Btn">Communication Skills</button>
-                            <button className="popular_topic_Btn">Communication Skills</button>
-                            <button className="popular_topic_Btn">Communication Skills</button>
-                            <button className="popular_topic_Btn">Communication Skills</button>
+                            <button className="popular_topic_Btn">PMI Project Management Professional(PMP)</button>
+                            <button className="popular_topic_Btn">Project Management</button>
+                            <button className="popular_topic_Btn">Data Modeline</button>
+                            <button className="popular_topic_Btn">Business Analysis</button>
+                            <button className="popular_topic_Btn">Real Estate Investing</button>
+                            <button className="popular_topic_Btn">Microsoft Power BI</button>
+                            <button className="popular_topic_Btn">SQL</button>
+                            <button className="popular_topic_Btn">PMI PMBOK</button>
+                            <button className="popular_topic_Btn">Data Analysis</button>
+                            <button className="popular_topic_Btn">PMI Certified Associate in Project Management (CAPM)</button>
                     </div>
             </div>
 

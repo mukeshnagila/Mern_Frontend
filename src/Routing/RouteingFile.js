@@ -27,7 +27,7 @@ function RouteingFile(){
                         <Route path="/Business/Human_Resources" element={<HumanR />} />
 
 
-                        <Route path="/Finance_Accounting" element={<Finance_Accounting />} />
+                        <Route path="/Finance_Accounting" element={<FinanceAccounting />} />
 
                 </Routes>
             </div>

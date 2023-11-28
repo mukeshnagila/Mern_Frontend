@@ -1,0 +1,88 @@
+.megamenu {
+    color: blue;
+    /* color: #fff; */
+    cursor: default;
+    display: inline-block;
+    font-family: sans-serif;
+    position: relative;
+    padding-top: 15%;
+    z-index: 1000;
+  }
+  
+  .megamenu__option {
+    position: relative;
+    /* background-color: red; */
+    background-color: #fff;
+    width: 220px;
+    padding-top: 0%;
+    margin-top: 15%;
+    border-radius: 1px solid silver;
+    text-align: start;
+    cursor: pointer;
+  }
+
+  .DropDD{
+    margin-top: 15px;
+    border: 1px solid silver;
+  }
+
+  .megamenu__option2 {
+    position: relative;
+    background-color: #fff;
+    width: 200px;
+    margin-top: 0%;
+    /* border-radius: 1px; */
+    text-align: start;
+    cursor: pointer;
+    /* border: 1px solid silver; */
+  }
+  
+  .megamenu > .megamenu__option-label:hover::after,
+  .megamenu__option:last-child::after {
+    background-color: rgb(222, 222, 222);
+    content: '';
+    display: block;
+    height: 50px;
+    left: 0;
+    position: absolute;
+    top: 100%;
+    width: auto;
+  }
+  
+  .megamenu__option-label {
+    /* background-color: #d7e1ea; */
+    color: black;
+    width: 100%;
+    padding: 0.5em;
+    position: relative;
+    white-space: nowrap;
+    
+    &:hover {
+      background-color: darken(#d2d7dc, 5);
+    }
+  }
+
+  .megamenu__option-label:hover{
+      color: #5624d0;
+  }
+  
+  .megamenu__option-children {
+    display: none;
+    position: absolute;
+    left: 100%;
+    top: 0;
+  }
+  
+  .megamenu > .megamenu__option-children {
+    left: 0;
+    top: 100%;
+    width: 100%;
+  }
+  
+  .megamenu__option:hover > .megamenu__option-children,
+  .megamenu__option-children:hover,
+  .megamenu__option-label:hover ~ .megamenu__option-children {
+    display: block;
+  }
+  
+  

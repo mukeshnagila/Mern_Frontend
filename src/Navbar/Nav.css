@@ -1,0 +1,232 @@
+
+.nav{
+    height: 70px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,.08), 0 4px 12px rgba(0,0,0,.08);
+    background: #fff;
+    padding: 0 2.4rem;
+    padding-top: 5px;
+    /* position: relative; */
+    justify-content: space-between;
+}
+
+.logo{
+    height: 40px;
+    margin-left: 5%;
+    /* width: 100%; */
+}
+
+.logo1{
+    display: flex;
+    justify-content: space-evenly;
+    margin-left: 2%;
+}
+
+.category{
+    color: #2d2f31;
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+    padding-left: 30%;
+    padding-top: 25%;
+    font-size: 15px;
+}
+.category:hover{
+    color: blueviolet;
+}
+
+.serchbar1 {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    /* padding-left: 1%; */
+    margin-left: -3%;
+}
+
+.serchbar{
+    /* flex-grow: 1; */
+    height: 2.2rem;
+    border: 1px solid #2d2f31;
+    border-radius: 9999px;
+    background-color: #f7f9fa;
+    /* margin: 0 1.2rem; */
+    width: 80%;
+    /* margin-left: -50px; */
+}
+
+.teachon{
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    font-size: 16px;
+}
+.teachon:hover{
+    color: blueviolet;
+}
+
+.cartimg{
+    height: 25px;
+    cursor: pointer;
+    padding-right: 5px;
+}
+
+.cartbtn{
+    border: none;
+    background-color: transparent;
+    text-align: center;
+    cursor: pointer;
+}
+
+.login{
+    word-spacing: 5px;
+    display: flex;
+    margin-left: -5%;
+}
+
+.loginbtn{
+    background-color: transparent;
+    text-align: center;
+}
+
+.loginbtn:hover{
+    background-color: silver;
+}
+
+.login > * {
+    margin-right: 20px; /* Adjust the value as needed */
+}
+
+.signupbtn{
+    background-color: black;
+    color: #fff;
+    text-align: center;
+}
+
+.btn{
+    height: 40px;
+    width: 5.5em;
+    cursor: pointer;
+}
+
+
+/* ////////////DropDown//////////////// */
+
+
+/* CSS for the dropdown menu */
+.dropdown {
+    position: relative;
+    display: inline-block;
+  }
+
+  .start-dropdown{
+    position: absolute;
+    /* border: 1px solid black; */
+    background-color: transparent;
+    /* background-color: rgb(255, 146, 127); */
+    min-width: 10px;
+    z-index: 1;
+    padding: 10%;
+    min-height: 50px;
+    width: 100px;
+
+  }
+
+  .dropdown-content_border{
+    border: 2px solid silver;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    margin-top: 15px;
+    color: black;
+    width: 240px;
+    z-index: 1;
+  }
+
+  .business-dropdown {
+    position: absolute;
+    top: 0;
+    left: 100%; /* Position the dropdown to the right of the "Business" category */
+    display: none;
+    background-color: #f9f9f9; /* Match the background color of the original dropdown */
+    border-radius: 15px;
+    margin-top: 0px;
+    color: black;
+    width: 250px; /* Match the width of the original dropdown */
+    z-index: 1;
+}
+
+.start-2nddropdown{
+    height: 375px;
+    background-color: #f9f9f9;
+    border: 2px solid silver;
+}
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  
+  .dropdown-content ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .dropdown-content li {
+    padding: 8px 12px;
+  }
+  
+  .dropdown-content a {
+    text-decoration: none;
+    color: black;
+    font-style: italic;
+    display: block;
+  }
+  
+  .dropdown-content a:hover {
+    color: rgb(34, 138, 117);
+    color: blue;
+  }
+
+  .lionhover:hover{
+    color: blueviolet;
+    cursor: pointer;
+  }
+
+  /* Add this to your existing CSS file */
+
+.business-dropdown {
+    position: absolute;
+    top: 0;
+    left: 100%; /* Position the dropdown to the right of the "Business" category */
+    display: none;
+    border-radius: 0%;
+}
+
+.lionhover:hover .business-dropdown {
+    display: block;
+}
+
+
+  /* /////////////////////////// Dropdown in Page //////////////////////// */
+
+  .dropdown-teachon{
+    width: 200px;
+    min-height: 100px;
+    background-color: #fff;
+    color: #2d2f31;
+    margin-top: 20%;
+    border: 1px solid silver;
+    position: absolute;
+    padding: 5% 5%;
+  }
+
+  .dropdown-teachon_btn{
+    background-color: #2d2f31;
+    color: #fff;
+    width: 90%;
+    height: 30px;
+    font-weight: 700;
+  }

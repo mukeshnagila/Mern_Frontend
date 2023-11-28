@@ -1,0 +1,240 @@
+.Nav2nd{
+    display: flex;
+    margin-top: 1px;
+    background-color: #f6f4f4;
+    border-bottom: 1px solid silver;
+    box-shadow: 0 1px 5px silver;
+    height: 35px;
+    padding-left: 2%;
+    align-items: center;
+}
+
+.Nav2nd_img{
+    height: 39px;
+    padding-left: 2%;
+    padding-right: 2%;
+}
+
+.Nav2nd_P{
+    padding-left: 3%;
+    font-size: 15px;
+    text-decoration: none;
+    color: #373a3d;
+}
+.Nav2nd_P:hover{
+    color: blueviolet;
+    cursor: pointer;
+}
+
+.Communication{
+    padding: 0% 7%;
+    padding-top: 3%;
+    color: #2d2f31;
+}
+
+.Communication_H1{
+    padding-bottom: 3%;
+    color: #2d2f31;
+}
+
+.Communication_H2{
+    color: #2d2f31;
+    padding-bottom: 2%;
+}
+
+.mostpopular_H3{
+    text-decoration: underline;
+    color: #373a3d;
+}
+.mostpopular_H3:hover{
+    color: black;
+    cursor: pointer;
+}
+
+.mostpopcontent{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    padding-top: 2%;
+}
+
+.Startmostpop_item{
+    width: 24%;
+    padding: 5px;
+}
+
+.Startmostpop_item_Img{
+    width: 100%;
+}
+
+.aboutsection{
+    padding: 5% 0%;
+    padding-bottom: 0%;
+}
+
+.ASchild1{
+    padding: 3% 7%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.ASmini{
+    display: flex;
+    width: 30%;
+}
+
+.ASmini_img{
+    width: 50px;
+    height: 50px;
+}
+
+.ASmini_H2{
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.popular_topic{
+    display: flex;
+    width: 100%;
+    padding: 2% 0%;
+    flex-wrap: wrap;
+}
+
+.popular_topic_Btn{
+    width: 19%;
+    height: 50px;
+    color: black;
+    font-weight: 700;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 5px;
+    background-color: #fff;
+}
+.popular_topic_Btn:hover{
+    background-color: #e1e6e7   ;
+}
+
+.PopularSec{
+    padding: 3% 7%;
+    padding-bottom: 1%;
+}
+
+.popular_Ins{
+    padding: 0% 7%; 
+}
+
+.popular_Ins_item{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    padding-top: 2%;
+}
+
+.Ins_item_1{
+    width: 20%;
+    border: 1px solid black;
+    display: flex;
+    padding: 1%;
+    padding-bottom: 2%;
+    margin: 1%;
+}
+.Ins_item_1:hover{
+    background-color: #e1e6e7;
+    cursor: pointer;
+}
+
+.Ins_item_1_Img{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-right: 5%;
+}
+
+.for_ins_text{
+    font-size: 14px;
+    font-weight: 300;
+}
+
+.allCcource{
+    padding: 2% 7%;
+}
+
+.fornotsure{
+    display: flex;
+    padding: 1% 2%;
+    border: 1px solid silver;
+    align-items: center;
+    gap: 2%;
+}
+
+.fornotsureImg{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.Business_last_sec{
+    padding: 3% 7%;
+}
+
+.forBLast{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.Bforstart{
+    display: flex;
+    align-items: center;
+    padding: 2% 0%;
+}
+
+.Bforstart_div{
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    border: 1px solid silver;
+}
+
+.Bforstart_span{
+    color: #b5b9b9;
+}
+
+.forBLast_content{
+    width: 80%;
+}
+
+.forBLast_content_item{
+    display: flex;
+    width: 100%;
+    margin: 1%;
+}
+
+.forBLast_content_item1{
+    width: 30%;
+    margin: 5px;
+}
+
+.forBLast_content_item2{
+    width: 55%;
+    margin: 5px;
+}
+
+.forBLast_content_item3{
+    width: 10%;
+    margin: 5px;
+}
+
+.forBLast_content_item1_Img{
+    width: 100%;
+    height: 200px;
+}
+
+.forlastcolor{
+    color: #808181;
+    font-size: 15px;
+}
+
+.LastBforstart{
+    padding: 0%;
+}

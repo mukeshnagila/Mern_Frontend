@@ -1,0 +1,87 @@
+.scartstart{
+    padding: 1% 0%;
+}
+
+.shopCart{
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+.shopCart1{
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+.shopCart2{
+    width: 30%;
+}
+
+.ForCartBTns{
+    line-height: 30px;
+}
+
+.ForCartBTns55{
+    color: blueviolet;
+    border: none;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+.for_Cart_page_start{
+    margin: 0%;
+    width: 95%;
+    margin-right: 4%;
+}
+
+.for_Cart_page{
+    display: flex;
+    width: 100%;
+    margin: 0%;
+}
+
+.for_Cart_page2{
+    width: 45%;
+    margin: 0px;
+}
+
+.for_Cart_page3{
+    width: 15%;
+    margin: 0px;
+    text-align: right;margin-right: 3%;
+}
+
+.scartstart_p{
+    font-weight: 700;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif  ;
+}
+
+.shopCart2_p{
+    color: #6a6f73;
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: -.02rem;
+    font-size: 1.6rem;
+    padding-bottom: 5%;
+}
+
+.shopCart2_h1{
+    padding-bottom: 3%;
+}
+
+.checkoutbtn{
+    margin-bottom: 5%;
+}
+
+.cartInput{
+    width: 70%;
+    height: 35px;
+}
+
+.PromoBtn{
+    width: 28%;
+    height: 40px;
+    color: #fff;
+    background-color: blueviolet;
+}

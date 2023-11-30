@@ -247,3 +247,24 @@
 .LastBforstart{
     padding: 0%;
 }
+
+
+
+
+/* ////////////////////////////////// Under Add To Cart ///////////////////////////////// */
+
+.Addcartmini{
+    display: flex;
+    justify-content: space-around;
+}
+
+.Addcartmini_update{
+    color: rgb(61, 119, 61);
+    padding-top: 3%;
+    font-weight: 700;
+    font-size: 14px;
+}
+
+.byaddcart{
+    z-index: 1000;
+}

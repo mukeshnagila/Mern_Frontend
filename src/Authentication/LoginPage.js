@@ -73,9 +73,15 @@ function LoginPage() {
 
                         <div className="logoBtn"><img className="logoBtnimg" src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSU_rPbrFVYKXVAX0yLPtYC--2Ix-dxthKUi1TODKVzl3eQIdow" alt="loginimg" /><span className="spanlogin">Continue with Apple</span></div><br/>
 
-                        <input className="Loginput" type="email" placeholder="User Email" name='email' onChange={handleInput} required /><br/>
+                        <div className="Loginput-container">
+                            <label className={`FloatingLabel ${data.email ? "pin" : ""}`}>User Email</label>
+                            <input className="Loginput" type="email" name='email' onChange={handleInput} required /><br/>
+                        </div>
 
-                        <input className="Loginput" type="password" placeholder="Password"  name='password' onChange={handleInput} required /><br />
+                        <div className="Loginput-container">
+                            <label className={`FloatingLabel ${data.password ? "pin" : ""}`}>User Password</label>
+                            <input className="Loginput" type="password" name='password' onChange={handleInput} required /><br />
+                        </div>
 
                         <button className="logoBtn1" onClick={hendleSubmit}>Log in</button>
 

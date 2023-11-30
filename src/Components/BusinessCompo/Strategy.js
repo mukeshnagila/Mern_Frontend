@@ -29,7 +29,7 @@ function Strategy(){
 
                     <div className="mostpopcontent">
                                 
-                    {Sdata.filter((item) => item.SubCategory === "Business_Strategy").map((item, index) => {
+                    {Sdata.filter((item) => item.subcategory === "Business_Strategy").map((item, index) => {
                             return(
                                 <>                        
                                     <div className="Startmostpop_item">
@@ -217,7 +217,7 @@ function Strategy(){
                             </div>
 
                             <div className="forBLast_content">
-                            {Sdata.filter((item) => item.SubCategory === "Business_Strategy").map((item, index) => {
+                            {Sdata.filter((item) => item.subcategory === "Business_Strategy").map((item, index) => {
                             return(
                                 <>
                                 <div className="forBLast_content_item">

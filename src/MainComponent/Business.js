@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import "../Components/BusinessCompo/Business.css";
 import { NavLink } from "react-router-dom";
 import { store } from "../Store/Data";
@@ -6,6 +6,21 @@ import { store } from "../Store/Data";
 function Business(){
 
     const [Sdata] = useContext(store);
+    // const [IsHovervisible, SetHoverVisible] = useState(false);
+
+    // const handleHoverDropdownToggle = () => {
+    //     SetHoverVisible(!IsHovervisible);
+    // };
+
+    const [isHoverVisible, setIsHoverVisible] = useState(Array(Sdata.length).fill(false));
+
+    const handleHoverDropdownToggle = (index) => {
+        setIsHoverVisible((prevVisibility) => {
+            const updatedVisibility = [...prevVisibility];
+            updatedVisibility[index] = !updatedVisibility[index];
+            return updatedVisibility;
+        });
+    };
 
     return(
         <>
@@ -29,10 +44,24 @@ function Business(){
 
                     <div className="mostpopcontent">
                                 
-                    {Sdata.filter((item) => item.category === "Business" && item.id % 4 === 0).map((item, index) => {
+                    {Sdata.filter((item) => item.category === "Business" && item.id % 7 === 0).map((item, index) => {
                             return(
                                 <>                        
-                                    <div className="Startmostpop_item">
+                                    <div key={index} className="Startmostpop_item dropdown" onMouseEnter={() => handleHoverDropdownToggle(index)} onMouseLeave={() => handleHoverDropdownToggle(index)}>
+                                                {isHoverVisible[index] && (
+                                                <div className="dropdown-myProfile byaddcart">
+                                                        <div className="Addcart1">
+                                                                <h4>{item.name}</h4>
+                                                                <div className="Addcartmini">
+                                                                    <button className="bestsellerbtn">Bestseller</button>
+                                                                    <p className="Addcartmini_update">Updated November 2023</p>
+                                                                </div><br/>    
+                                                                <p>{item.discr}</p>
+                                                        </div>  
+                                                        <hr/><br/>
+                                                        <button className="logoBtn1">Add To Cart</button>
+                                                    </div>
+                                                )}
                                         <img className="Startmostpop_item_Img" src={item.image} alt="Communicationimage" />
                                         <h3>{item.name}</h3>
                                         <p>{item.Wname}</p>
@@ -217,7 +246,7 @@ function Business(){
                             </div>
 
                             <div className="forBLast_content">
-                            {Sdata.filter((item) => item.category === "Business" && item.id % 5 === 0).map((item, index) => {
+                            {Sdata.filter((item) => item.category === "Business" && item.id % 8 === 0).map((item, index) => {
                             return(
                                 <>
                                 <div className="forBLast_content_item">

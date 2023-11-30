@@ -34,9 +34,12 @@
 }
 
 .Loginput{
-    width: 99%;
-    height: 45px;
+    width: 92%;
+    height: 55px;
     margin-bottom: 5%;
+    text-align: start;
+    padding-left: 8%;
+    padding-top: 2%;
 }
 
 .logoBtn1{
@@ -81,3 +84,30 @@
     font-weight: bold;
     padding-left: 4%;
 }
+
+
+.Loginput-container {
+    position: relative;
+    margin-bottom: 20px;
+  }
+  
+  .FloatingLabel {
+    position: absolute;
+    left: 10px;
+    top: 40%;
+    transform: translateY(-50%);
+    pointer-events: none;
+    transition: top 0.3s ease, font-size 0.3s ease;
+    color: black; 
+    font-weight: bold;
+    padding-left: 4%;
+    font-size: 15px;
+  }
+  
+  .pin {
+    top: 15%;
+    color: black; 
+    font-weight: bold;
+    padding-left: 4%;
+    font-size: 12px;
+  }

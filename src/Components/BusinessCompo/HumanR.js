@@ -29,7 +29,7 @@ function HumanR(){
 
                     <div className="mostpopcontent">
                                 
-                    {Sdata.filter((item) => item.SubCategory === "Human_Resources").map((item, index) => {
+                    {Sdata.filter((item) => item.subcategory === "Human_Resources").map((item, index) => {
                             return(
                                 <>                        
                                     <div className="Startmostpop_item">
@@ -218,7 +218,7 @@ function HumanR(){
 
                             <div className="forBLast_content">
                             
-                            {Sdata.filter((item) => item.SubCategory === "Human_Resources").map((item, index) => {
+                            {Sdata.filter((item) => item.subcategory === "Human_Resources").map((item, index) => {
                             return(
                                 <>
                                 <div className="forBLast_content_item">

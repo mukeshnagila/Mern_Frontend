@@ -259,9 +259,9 @@ function Nav(){
                         )}
                     </button>
 
-                    <button className="cartbtn"><img className="cartimg" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWBCXqF1rdOYnyCZjSGCFQXGOVCKLMcgnQyRYdvHeU4XkdGnhJ" alt="CartImg" /> </button>
+                    <button className="cartbtn"><NavLink to="/Cart"><img className="cartimg" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWBCXqF1rdOYnyCZjSGCFQXGOVCKLMcgnQyRYdvHeU4XkdGnhJ" alt="CartImg" /></NavLink>0</button>
 
-                    {tokenforAuth ?
+                    {tokenforAuth || userData ?
                         (<>
                             <div>
                                 <button className="teachon mylearning">My Learning</button>

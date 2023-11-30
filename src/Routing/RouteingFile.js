@@ -13,6 +13,7 @@ import FinanceAccounting from "../MainComponent/Finance_Accounting";
 import DataStore from "../Store/Data";
 import LoginPage from "../Authentication/LoginPage";
 import SignupPage from "../Authentication/SignupPage";
+import CartPage from "../Cart/CartPage";
 
 function RouteingFile(){
     return(
@@ -36,6 +37,7 @@ function RouteingFile(){
 
                             <Route path="/login" element={<LoginPage />} />
                             <Route path="/register" element={<SignupPage />} />
+                            <Route path="/Cart" element={<CartPage />} />
 
                     </Routes>
             </DataStore>    

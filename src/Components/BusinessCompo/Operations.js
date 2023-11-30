@@ -29,7 +29,7 @@ function Operations(){
 
                     <div className="mostpopcontent">
                                 
-                    {Sdata.filter((item) => item.SubCategory === "Operations").map((item, index) => {
+                    {Sdata.filter((item) => item.subcategory === "Operations").map((item, index) => {
                             return(
                                 <>                        
                                     <div className="Startmostpop_item">
@@ -217,7 +217,7 @@ function Operations(){
                             </div>
 
                             <div className="forBLast_content">
-                            {Sdata.filter((item) => item.SubCategory === "Operations").map((item, index) => {
+                            {Sdata.filter((item) => item.subcategory === "Operations").map((item, index) => {
                             return(
                                 <>
                                 <div className="forBLast_content_item">

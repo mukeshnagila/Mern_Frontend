@@ -5,8 +5,9 @@ export const store = createContext();
 function DataStore(props) {
     const [data, setData] = useState([]);
     const fetchdata = () => {
-        // return fetch("https://ecommerce-project-8m5d.onrender.com/api/Productdata")
-        return fetch("http://localhost:8008/api/Productdata")
+        return fetch("https://mern-udemy-clone-backend.onrender.com/api/findProduct")
+        // return fetch("http://localhost:8008/api/findProduct")
+        // return fetch("http://localhost:8008/api/Productdata")
             .then((response) => response.json())
             .then((responseData) => setData(responseData))
             // .then((user) => setData(user))

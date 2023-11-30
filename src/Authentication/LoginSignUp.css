@@ -1,0 +1,83 @@
+.forlogin{
+    padding: 2% 2%;
+    display: flex;
+    justify-content: center;
+}
+
+.LoginH1{
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+
+.logoBtnimg{
+    width: 30px;
+    height: 30px;
+    margin-left: 2%;
+    margin-right: 2%;
+}
+
+.logoBtn{
+    align-items: center;
+    width: 100%;
+    height: 40px;
+    background-color: #fff;
+    cursor: pointer;
+    display: flex;
+    justify-content: left;
+    border: 1px solid silver;
+}
+
+.spanlogin{
+    color: black;
+    font-weight: 700;
+}
+
+.Loginput{
+    width: 99%;
+    height: 45px;
+    margin-bottom: 5%;
+}
+
+.logoBtn1{
+    background-color: #a435f0;
+    width: 100%;
+    height: 40px;
+    border: 1px solid silver;
+    color: #fff;
+    font-weight: 700;
+    cursor: pointer;
+    margin-bottom: 2%;
+}
+.logoBtn1:hover{
+    background-color: blueviolet;
+}
+
+.Donthaveacc{
+    color: #a435f0;
+    font-weight: 700;
+}
+
+.forSignup{
+    padding: 2%;
+    display: flex;
+    justify-content: center;
+}
+
+.Loginput[name='name']::placeholder {
+    color: black; 
+    font-weight: bold;
+    padding-left: 4%;
+}
+
+.Loginput[name='email']::placeholder {
+    color: black; 
+    font-weight: bold;
+    padding-left: 4%;
+}
+
+.Loginput[name='password']::placeholder {
+    color: black; 
+    font-weight: bold;
+    padding-left: 4%;
+}

@@ -87,6 +87,9 @@
 .loginbtn{
     background-color: transparent;
     text-align: center;
+    color: black;
+    text-decoration: none;
+    font-weight: 700;
 }
 
 .loginbtn:hover{
@@ -101,6 +104,8 @@
     background-color: black;
     color: #fff;
     text-align: center;
+    font-weight: 700;
+    text-decoration: none;
 }
 
 .btn{
@@ -223,10 +228,59 @@
     padding: 5% 5%;
   }
 
+  .dropdown-myProfile{
+    width: 280px;
+    min-height: 100px;
+    background-color: #fff;
+    color: #2d2f31;
+    margin-top: 45%;
+    right: 20%;
+    border: 1px solid silver;
+    position: absolute;
+    padding: 5% 5%;
+  }
+
   .dropdown-teachon_btn{
     background-color: #2d2f31;
     color: #fff;
     width: 90%;
     height: 30px;
     font-weight: 700;
+  }
+
+  .mylearning{
+    padding-top: 15%;
+  }
+
+  .myProfile{
+    height: 45px;
+    width: 45px;
+    border-radius: 50%;
+    background-color: black;
+    color: #fff;
+    font-weight: 700;
+  }
+
+  .afterlogin1{
+    display: flex;
+    width: 100%;
+  }
+
+  .afterlogin2{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    color: #fff;
+    background-color: black;
+    margin: 5%;
+    margin-right: 0%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .afterlogin3{
+    width: 50%;
+    margin: 5%;
+    line-height: 20px;
   }

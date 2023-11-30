@@ -1,8 +1,12 @@
-import React from "react";
+import React, { useContext } from "react";
 import "../BusinessCompo/Business.css";
 import { NavLink } from "react-router-dom";
+import { store } from "../../Store/Data";
 
 function Communication(){
+
+    const [Sdata] = useContext(store);
+
     return(
         <>
             <div className="Nav2nd">
@@ -24,118 +28,40 @@ function Communication(){
                     <h3 className="mostpopular_H3">Most popular</h3><hr/>
 
                     <div className="mostpopcontent">
-                                
-                                <div className="Startmostpop_item">
-                                    <img className="Startmostpop_item_Img" src="https://img-c.udemycdn.com/course/240x135/14284_6833_17.jpg" alt="Communicationimage" />
-                                    <h3>Powerful Business Writing: How to Write Concisely</h3>
-                                    <p>Caroline McDevitt</p>
-                                    <div className="subInfoRating">
-                                        <div class="rating">
-                                            <div class="star-container">
-                                                <div class="star half"></div>
-                                            </div>
-                                            <div class="star-container">
-                                                <div class="star"></div>
-                                            </div>
-                                            <div class="star-container">
-                                                <div class="star"></div>
-                                            </div>
-                                            <div class="star-container">
-                                                <div class="star"></div>
-                                            </div>
-                                            <div class="star-container">
-                                                <div class="star"></div>
-                                            </div>
-                                            </div><p className="rating_length">(486391)</p>
-                                        </div>
 
-                                        <div> <span  className="subInforupee">₹499</span><span className="subInfooldmrp"> <del> ₹3099</del></span></div>
-                                        <button className="bestsellerbtn">Bestseller</button>
-                                </div>
+                        {Sdata.filter((item) => item.SubCategory === "Communication").map((item, index) => {
+                            return(
+                                <>                        
+                                    <div className="Startmostpop_item">
+                                        <img className="Startmostpop_item_Img" src={item.image} alt="Communicationimage" />
+                                        <h3>{item.name}</h3>
+                                        <p>{item.Wname}</p>
+                                        <div className="subInfoRating">
+                                            <div class="rating">
+                                                <div class="star-container">
+                                                    <div class="star half"></div>
+                                                </div>
+                                                <div class="star-container">
+                                                    <div class="star"></div>
+                                                </div>
+                                                <div class="star-container">
+                                                    <div class="star"></div>
+                                                </div>
+                                                <div class="star-container">
+                                                    <div class="star"></div>
+                                                </div>
+                                                <div class="star-container">
+                                                    <div class="star"></div>
+                                                </div>
+                                                </div><p className="rating_length">(486391)</p>
+                                            </div>
 
-                                <div className="Startmostpop_item">
-                                    <img className="Startmostpop_item_Img" src="https://img-c.udemycdn.com/course/240x135/14284_6833_17.jpg" alt="Communicationimage" />
-                                    <h3>Powerful Business Writing: How to Write Concisely</h3>
-                                    <p>Caroline McDevitt</p>
-                                    <div className="subInfoRating">
-                                        <div class="rating">
-                                            <div class="star-container">
-                                                <div class="star half"></div>
-                                            </div>
-                                            <div class="star-container">
-                                                <div class="star"></div>
-                                            </div>
-                                            <div class="star-container">
-                                                <div class="star"></div>
-                                            </div>
-                                            <div class="star-container">
-                                                <div class="star"></div>
-                                            </div>
-                                            <div class="star-container">
-                                                <div class="star"></div>
-                                            </div>
-                                            </div><p className="rating_length">(486391)</p>
-                                        </div>
-
-                                        <div> <span  className="subInforupee">₹499</span><span className="subInfooldmrp"> <del> ₹3099</del></span></div>
-                                        <button className="bestsellerbtn">Bestseller</button>
-                                </div>
-
-                                <div className="Startmostpop_item">
-                                    <img className="Startmostpop_item_Img" src="https://img-c.udemycdn.com/course/240x135/14284_6833_17.jpg" alt="Communicationimage" />
-                                    <h3>Powerful Business Writing: How to Write Concisely</h3>
-                                    <p>Caroline McDevitt</p>
-                                    <div className="subInfoRating">
-                                        <div class="rating">
-                                            <div class="star-container">
-                                                <div class="star half"></div>
-                                            </div>
-                                            <div class="star-container">
-                                                <div class="star"></div>
-                                            </div>
-                                            <div class="star-container">
-                                                <div class="star"></div>
-                                            </div>
-                                            <div class="star-container">
-                                                <div class="star"></div>
-                                            </div>
-                                            <div class="star-container">
-                                                <div class="star"></div>
-                                            </div>
-                                            </div><p className="rating_length">(486391)</p>
-                                        </div>
-
-                                        <div> <span  className="subInforupee">₹499</span><span className="subInfooldmrp"> <del> ₹3099</del></span></div>
-                                        <button className="bestsellerbtn">Bestseller</button>
-                                </div>
-
-                                <div className="Startmostpop_item">
-                                    <img className="Startmostpop_item_Img" src="https://img-c.udemycdn.com/course/240x135/14284_6833_17.jpg" alt="Communicationimage" />
-                                    <h3>Powerful Business Writing: How to Write Concisely</h3>
-                                    <p>Caroline McDevitt</p>
-                                    <div className="subInfoRating">
-                                        <div class="rating">
-                                            <div class="star-container">
-                                                <div class="star half"></div>
-                                            </div>
-                                            <div class="star-container">
-                                                <div class="star"></div>
-                                            </div>
-                                            <div class="star-container">
-                                                <div class="star"></div>
-                                            </div>
-                                            <div class="star-container">
-                                                <div class="star"></div>
-                                            </div>
-                                            <div class="star-container">
-                                                <div class="star"></div>
-                                            </div>
-                                            </div><p className="rating_length">(486391)</p>
-                                        </div>
-
-                                        <div> <span  className="subInforupee">₹499</span><span className="subInfooldmrp"> <del> ₹3099</del></span></div>
-                                        <button className="bestsellerbtn">Bestseller</button>
-                                </div>
+                                            <div> <span  className="subInforupee">₹{item.price}</span><span className="subInfooldmrp"> <del> ₹{item.oldprice}</del></span></div>
+                                            <button className="bestsellerbtn">Bestseller</button>
+                                    </div>
+                                </>
+                            )
+                        })} 
                     </div>
                 </div>
             </div>
@@ -291,13 +217,16 @@ function Communication(){
                             </div>
 
                             <div className="forBLast_content">
+                            {Sdata.filter((item) => item.SubCategory === "Communication").map((item, index) => {
+                            return(
+                                <>
                                 <div className="forBLast_content_item">
                                     <div className="forBLast_content_item1">
-                                            <img className="forBLast_content_item1_Img" src="https://img-c.udemycdn.com/course/240x135/1355610_375a_5.jpg" alt="Communicationimage" />
+                                            <img className="forBLast_content_item1_Img" src={item.image} alt="HumanRimage" />
                                     </div>
 
                                         <div className="forBLast_content_item2">
-                                            <h3>Communication Fundamentals: How To Communicate Better</h3>
+                                            <h3>{item.name}</h3>
                                             <p>Become an Effective Communicator And Learn How to Get Your Message Across By Learning Communication Fundamentals</p><br/>
                                             <p className="forlastcolor">Life Progression Project, Lorraine Wiseman</p>
                                             <div className="Bforstart LastBforstart">
@@ -313,66 +242,15 @@ function Communication(){
                                         </div>
 
                                     <div className="forBLast_content_item3">
-                                            <h4>₹ 699</h4>
-                                            <p><del>₹ 1999</del></p>
+                                            <h4>₹ {item.price}</h4>
+                                            <p><del>₹ {item.oldprice}</del></p>
                                     </div>
                                 </div><hr/>
 
 
-                                <div className="forBLast_content_item">
-                                    <div className="forBLast_content_item1">
-                                            <img className="forBLast_content_item1_Img" src="https://img-c.udemycdn.com/course/240x135/1355610_375a_5.jpg" alt="Communicationimage" />
-                                    </div>
-
-                                        <div className="forBLast_content_item2">
-                                            <h3>Communication Fundamentals: How To Communicate Better</h3>
-                                            <p>Become an Effective Communicator And Learn How to Get Your Message Across By Learning Communication Fundamentals</p><br/>
-                                            <p className="forlastcolor">Life Progression Project, Lorraine Wiseman</p>
-                                            <div className="Bforstart LastBforstart">
-                                                    <h3>4.5</h3>
-                                                    <div class="star"></div>
-                                                    <div class="star"></div>
-                                                    <div class="star"></div>
-                                                    <div class="star"></div>
-                                                    <div class="star"></div>
-                                                    <p><span className="Bforstart_span">275</span></p>
-                                            </div>
-                                            <p className="forlastcolor">1.5 total hours . 38 lectures . All Levels</p>
-                                        </div>
-
-                                    <div className="forBLast_content_item3">
-                                            <h4>₹ 699</h4>
-                                            <p><del>₹ 1999</del></p>
-                                    </div>
-                                </div><hr/>
-
-
-                                <div className="forBLast_content_item">
-                                    <div className="forBLast_content_item1">
-                                            <img className="forBLast_content_item1_Img" src="https://img-c.udemycdn.com/course/240x135/1355610_375a_5.jpg" alt="Communicationimage" />
-                                    </div>
-
-                                        <div className="forBLast_content_item2">
-                                            <h3>Communication Fundamentals: How To Communicate Better</h3>
-                                            <p>Become an Effective Communicator And Learn How to Get Your Message Across By Learning Communication Fundamentals</p><br/>
-                                            <p className="forlastcolor">Life Progression Project, Lorraine Wiseman</p>
-                                            <div className="Bforstart LastBforstart">
-                                                    <h3>4.5</h3>
-                                                    <div class="star"></div>
-                                                    <div class="star"></div>
-                                                    <div class="star"></div>
-                                                    <div class="star"></div>
-                                                    <div class="star"></div>
-                                                    <p><span className="Bforstart_span">275</span></p>
-                                            </div>
-                                            <p className="forlastcolor">1.5 total hours . 38 lectures . All Levels</p>
-                                        </div>
-
-                                    <div className="forBLast_content_item3">
-                                            <h4>₹ 699</h4>
-                                            <p><del>₹ 1999</del></p>
-                                    </div>
-                                </div><hr/>
+                                </>
+                            )
+                        })} 
 
 
                             </div>

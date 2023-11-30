@@ -1,11 +1,12 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "../Navbar/Nav.css";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 
 function Nav(){
 
     const [isDropdownVisible, setDropdownVisible] = useState(false);
     const [isTecDropdownVisible, setTecDropdownVisible] = useState(false);
+    const [IsProfilevisible, SetProfileVisible] = useState(false);
 
     const handleDropdownToggle = () => {
         setDropdownVisible(!isDropdownVisible);
@@ -14,6 +15,51 @@ function Nav(){
     const handleTecDropdownToggle = () => {
         setTecDropdownVisible(!isTecDropdownVisible);
     };
+
+    const handleProfilecDropdownToggle = () => {
+        SetProfileVisible(!IsProfilevisible);
+    };
+
+    const tokenforAuth = localStorage.getItem("token");
+
+    const [userData, setUserData] = useState(null);
+
+    useEffect(() => {
+        const fetchUserData = async () => {
+          const token = localStorage.getItem("token");
+          console.log("Token:", token);  
+          if (token) {
+            try {
+            //   const response = await fetch("https://ecommerce-project-8m5d.onrender.com/api/finduser", {
+                const response = await fetch("http://localhost:8008/api/finduser", {
+                headers: {
+                  Authorization: `Bearer ${token}`,
+                },
+              });
+    
+              if (response.ok) {
+                const user = await response.json();
+                setUserData(user);
+              } else {
+                // Handle error when fetching user data
+                console.error("Failed to fetch user data");
+              }
+            } catch (error) {
+              // Handle other errors
+              console.error("Error fetching user data:", error);
+            }
+          }
+        };
+    
+        fetchUserData();
+      }, []);
+
+      const nav = useNavigate();
+      const handelLogout = () => {
+        localStorage.removeItem("token")
+        nav('/login')
+        window.location.reload(true)
+    }
 
     return(
         <>
@@ -211,10 +257,41 @@ function Nav(){
                                     <button className="dropdown-teachon_btn">Lern more</button>
                                 </div>
                         )}
-                    </button>    
+                    </button>
+
                     <button className="cartbtn"><img className="cartimg" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWBCXqF1rdOYnyCZjSGCFQXGOVCKLMcgnQyRYdvHeU4XkdGnhJ" alt="CartImg" /> </button>
-                    <button className="loginbtn btn">Log in</button>
-                    <button className="signupbtn btn">Sign up</button>
+
+                    {tokenforAuth ?
+                        (<>
+                            <div>
+                                <button className="teachon mylearning">My Learning</button>
+                            </div>
+                                <button className="myProfile dropdown" onMouseEnter={handleProfilecDropdownToggle} onMouseLeave={handleProfilecDropdownToggle}>MN
+                                {IsProfilevisible && (
+                                    <div className="dropdown-myProfile">
+                                        <div className="afterlogin1">
+                                                <div className="afterlogin2">
+                                                    <h2>MN</h2>
+                                                </div>
+                                                <div className="afterlogin3">
+                                                    <h3>Mukesh nagila</h3>
+                                                    <p>nagilamukesh43@gmail.com</p>
+                                                </div>
+                                        </div><hr/><br/>
+                                        <button className="signupbtn btn" onClick={handelLogout}>LogOut</button>
+                                        <br/><br/>
+                                    </div>
+                                )}
+                                </button>
+                        </> )  
+                    : 
+                        (<>
+                            <button className="loginbtn btn"><NavLink to="/login" className="loginbtn">Log in</NavLink></button>
+                            <button className="signupbtn btn"><NavLink to="/register" className="signupbtn">Sign up</NavLink></button>
+                        </>)
+                    }   
+                    
+                       
                 </div>
             </div>
         </>

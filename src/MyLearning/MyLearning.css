@@ -1,0 +1,23 @@
+.MyLearningPage{
+    padding: 0% 10%;
+    text-align: center;
+}
+
+.learningpage{
+    text-align: center;
+}
+
+.forBLast_content_learning{
+    width: 100%;
+}
+
+.learnMy{
+    display: flex;
+    align-items: center;
+    padding-left: 3%;
+}
+.learnMy:hover{
+    color: blueviolet;
+    cursor: pointer;
+    font-size: 17px;
+}

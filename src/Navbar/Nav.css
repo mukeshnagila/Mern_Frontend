@@ -51,8 +51,9 @@
     border-radius: 9999px;
     background-color: #f7f9fa;
     /* margin: 0 1.2rem; */
-    width: 80%;
+    width: 78%;
     /* margin-left: -50px; */
+    text-align: center;
 }
 
 .teachon{
@@ -253,6 +254,8 @@
 
   .mylearning{
     padding-top: 15%;
+    text-decoration: none;
+    color: #2d2f31;
   }
 
   .myProfile{
@@ -286,4 +289,16 @@
     width: 50%;
     margin: 5%;
     line-height: 20px;
+  }
+
+  .searchicon{
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+  }
+
+  .searchiconBtn{
+    border: none;
+    background-color: #fff;
+    cursor: pointer;
   }

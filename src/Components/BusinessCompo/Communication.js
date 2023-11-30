@@ -1,11 +1,22 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import "../BusinessCompo/Business.css";
 import { NavLink } from "react-router-dom";
 import { store } from "../../Store/Data";
+import AddCardBtn from "../../Cart/AddToCart/BtnAddCart";
 
 function Communication(){
 
     const [Sdata] = useContext(store);
+
+    const [isHoverVisible, setIsHoverVisible] = useState(Array(Sdata.length).fill(false));
+
+    const handleHoverDropdownToggle = (index) => {
+        setIsHoverVisible((prevVisibility) => {
+            const updatedVisibility = [...prevVisibility];
+            updatedVisibility[index] = !updatedVisibility[index];
+            return updatedVisibility;
+        });
+    };
 
     return(
         <>
@@ -32,7 +43,21 @@ function Communication(){
                         {Sdata.filter((item) => item.subcategory === "Communication").map((item, index) => {
                             return(
                                 <>                        
-                                    <div className="Startmostpop_item">
+                                    <div key={index} className="Startmostpop_item dropdown" onMouseEnter={() => handleHoverDropdownToggle(index)} onMouseLeave={() => handleHoverDropdownToggle(index)}>
+                                                {isHoverVisible[index] && (
+                                                <div className="dropdown-myProfile byaddcart">
+                                                        <div className="Addcart1">
+                                                                <h4>{item.name}</h4>
+                                                                <div className="Addcartmini">
+                                                                    <button className="bestsellerbtn">Bestseller</button>
+                                                                    <p className="Addcartmini_update">Updated November 2023</p>
+                                                                </div><br/>    
+                                                                <p>{item.discr}</p>
+                                                        </div>  
+                                                        <hr/><br/>
+                                                        <AddCardBtn product={item}/>
+                                                    </div>
+                                                )}
                                         <img className="Startmostpop_item_Img" src={item.image} alt="Communicationimage" />
                                         <h3>{item.name}</h3>
                                         <p>{item.Wname}</p>

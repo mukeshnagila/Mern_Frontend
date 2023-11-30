@@ -2,6 +2,7 @@ import React, { useContext, useState } from "react";
 import "../Components/BusinessCompo/Business.css";
 import { NavLink } from "react-router-dom";
 import { store } from "../Store/Data";
+import AddCardBtn from "../Cart/AddToCart/BtnAddCart";
 
 function Business(){
 
@@ -59,7 +60,7 @@ function Business(){
                                                                 <p>{item.discr}</p>
                                                         </div>  
                                                         <hr/><br/>
-                                                        <button className="logoBtn1">Add To Cart</button>
+                                                        <AddCardBtn product={item}/>
                                                     </div>
                                                 )}
                                         <img className="Startmostpop_item_Img" src={item.image} alt="Communicationimage" />

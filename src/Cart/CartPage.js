@@ -1,101 +1,173 @@
-import React from "react";
+import React, { useEffect, useMemo, useState } from "react";
 import "../Cart/CartPage.css";
+import { useDispatch, useSelector } from "react-redux";
+import { useNavigate } from "react-router-dom";
+import { addPurchasedCourses, placeOrderAction, removeItemFromCart } from "./AddToCart/cartActions";
 
 function CartPage() {
+
+    const cartItems = useSelector((state) => state.cart.items);
+    const dispatch = useDispatch();
+    const nav = useNavigate();
+
+    // Wrap the initialization of "cartItems" in its own useMemo() Hook
+    //next line is the simple warning ignore this 
+    const memoizedCartItems = useMemo(() => cartItems, [cartItems]);// eslint-disable-next-line 
+    const [totalAmount, setTotalAmount] = useState(0);
+    const [isPaypalButtonVisible, setIsPaypalButtonVisible] = useState(true);
+
+    useEffect(() => {
+        const calculatedTotalAmount = memoizedCartItems.reduce((total, item) => total + item.price * item.quantity, 0);
+        setTotalAmount(calculatedTotalAmount);
+    }, [memoizedCartItems]);
+
+    // const increaseQuantity = (item) => {
+    //     dispatch(addToCart(item));
+    // }
+
+    const decreaseQuantity = (item) => {
+        dispatch(removeItemFromCart(item.id));
+    }
+
+    const goTOHome = () => {
+        nav("/");
+    };
+
 
     const applyPromo = () => {
         alert("This Coupen Is Not Valid")
     }
-    
+
+
+
+    const handlePaypalButton = async () => {
+        try {
+            const totalItems = cartItems.reduce((total, item) => total + item.quantity, 0);
+            console.log(totalItems);
+
+            const paypalButtonContainer = document.getElementById("paypal-button-container");
+            setIsPaypalButtonVisible(false);
+            window.paypal.Buttons({
+                createOrder: (data, actions) => {
+                    return actions.order.create({
+                        purchase_units: [
+                            {
+                                description: "Your order description here",
+                                amount: {
+                                    currency_code: "USD",
+                                    value: totalAmount.toFixed(2),
+                                },
+                            },
+                        ],
+                    });
+                },
+                onApprove: (data, actions) => {
+                    return actions.order.capture().then((details) => {
+                        dispatch(placeOrderAction());
+
+                        const purchasedCourses = cartItems; // Assuming cartItems represent the courses
+                        dispatch(addPurchasedCourses(purchasedCourses));
+
+                        nav('/mylearning');
+                        alert("Your Order Is Placed. Thank You For Shopping!");
+                    });
+                },
+                onError: (err) => {
+                    console.error("PayPal error:", err);
+                    alert("Payment Failed. Please try again.");
+                },
+            }).render(paypalButtonContainer);
+        } catch (error) {
+            console.error("Error initiating payment:", error);
+            alert("Payment Failed. Please try again.");
+        }
+    };
+
+
+
     return(
         <>
             <div className="Communication">
                 <h1>Shopping Cart</h1>
 
             <div className="scartstart">
-                <p className="scartstart_p">0 Courses in Cart</p>
+                <p className="scartstart_p">{cartItems.length} Courses in Cart</p>
                 <div className="shopCart">
                         <div className="shopCart1">
-                            <div className="for_Cart_page_start"><hr/><br/>
-                                
-                                <div className="for_Cart_page">
-                                    <div className="forBLast_content_item1">
-                                            <img className="forshopcart_Img" src="https://img-c.udemycdn.com/course/240x135/1355610_375a_5.jpg" alt="FinanceAccountingimage" />
-                                    </div>
-
-                                        <div className="for_Cart_page2">
-                                            <h4>Communication Fundamentals: How To Communicate Better</h4>
-                                            <p className="forlastcolor">Life Progression Project, Lorraine Wiseman</p><br/>
-                                            <div className="Bforstart LastBforstart">
-                                                    <h3>4.5</h3>
-                                                    <div class="star"></div>
-                                                    <div class="star"></div>
-                                                    <div class="star"></div>
-                                                    <div class="star"></div>
-                                                    <div class="star"></div>
-                                                    <p><span className="Bforstart_span">275</span></p>
+                        {cartItems.length < 1 ? ( 
+                            <>       
+                                <div className="EmptyCartImg">
+                                        <h2>Your Cart Is Empty....</h2>
+                                </div>
+                            </>
+                        ) : ( 
+                            <>
+                                <div className="for_Cart_page_start"><hr/><br/>
+                                {cartItems.map((item) => (  
+                                    <>      
+                                        <div className="for_Cart_page" key={item.id}>
+                                            <div className="forBLast_content_item1">
+                                                    <img className="forshopcart_Img" src={item.image} alt="FinanceAccountingimage" />
                                             </div>
-                                            <p className="forlastcolor">1.5 total hours . 38 lectures . All Levels</p>
-                                        </div>
-                                    
-                                        <div className="for_Cart_page3 ForCartBTns">
-                                            <button className="ForCartBTns55">Remove</button><br/>
-                                            <button className="ForCartBTns55">Save for Later</button><br/>
-                                            <button className="ForCartBTns55">Move to Wishlist</button><br/>
-                                        </div>
+
+                                                <div className="for_Cart_page2">
+                                                    <h4>{item.name}</h4>
+                                                    <p className="forlastcolor">{item.Wname}</p><br/>
+                                                    <div className="Bforstart LastBforstart">
+                                                            <h3>4.5</h3>
+                                                            <div class="star"></div>
+                                                            <div class="star"></div>
+                                                            <div class="star"></div>
+                                                            <div class="star"></div>
+                                                            <div class="star"></div>
+                                                            <p><span className="Bforstart_span">275</span></p>
+                                                    </div>
+                                                    <p className="forlastcolor">1.5 total hours . 38 lectures . All Levels</p>
+                                                </div>
+                                            
+                                                <div className="for_Cart_page3 ForCartBTns">
+                                                    <button className="ForCartBTns55" onClick={() => decreaseQuantity(item)}>Remove</button><br/>
+                                                    <button className="ForCartBTns55">Save for Later</button><br/>
+                                                    <button className="ForCartBTns55">Move to Wishlist</button><br/>
+                                                </div>
 
 
-                                    <div className="forBLast_content_item3">
-                                            <h4>₹ 699</h4>
-                                            <p><del>₹ 1999</del></p>
-                                    </div>
-                                </div><hr/>
+                                            <div className="forBLast_content_item3">
+                                                    <h4>₹ {item.price}</h4>
+                                                    <p><del>₹ {item.oldprice}</del></p><br/>
 
-                                <div className="for_Cart_page">
-                                    <div className="forBLast_content_item1">
-                                            <img className="forshopcart_Img" src="https://img-c.udemycdn.com/course/240x135/1355610_375a_5.jpg" alt="FinanceAccountingimage" />
-                                    </div>
-
-                                        <div className="for_Cart_page2">
-                                            <h4>Communication Fundamentals: How To Communicate Better</h4>
-                                            <p className="forlastcolor">Life Progression Project, Lorraine Wiseman</p><br/>
-                                            <div className="Bforstart LastBforstart">
-                                                    <h3>4.5</h3>
-                                                    <div class="star"></div>
-                                                    <div class="star"></div>
-                                                    <div class="star"></div>
-                                                    <div class="star"></div>
-                                                    <div class="star"></div>
-                                                    <p><span className="Bforstart_span">275</span></p>
+                                                    {/* <h5 className="forQnt1">Item Quant -</h5>
+                                                    <h5 className="forQnt forQntSpan"> {item.quantity} </h5> */}
                                             </div>
-                                            <p className="forlastcolor">1.5 total hours . 38 lectures . All Levels</p>
-                                        </div>
-                                    
-                                        <div className="for_Cart_page3 ForCartBTns">
-                                            <button className="ForCartBTns55">Remove</button><br/>
-                                            <button className="ForCartBTns55">Save for Later</button><br/>
-                                            <button className="ForCartBTns55">Move to Wishlist</button><br/>
-                                        </div>
+                                        </div><hr/>
+                                    </>
+                                    ))}
 
-
-                                    <div className="forBLast_content_item3">
-                                            <h4>₹ 699</h4>
-                                            <p><del>₹ 1999</del></p>
-                                    </div>
-                                </div><hr/>
-
-                            </div>    
+                                </div>
+                            </>)
+                            }       
                         </div>
 
-                        <div className="shopCart2">
-                            <p className="shopCart2_p">Total</p>
-                            <h1 className="shopCart2_h1">₹6,398</h1>
-                            <button className="logoBtn1 checkoutbtn">Checkout</button><br/><hr/><br/>
+                        {cartItems.length > 0 ? (
+                            <>
+                            {isPaypalButtonVisible && (
+                                <div className="shopCart2">
+                                    <p className="shopCart2_p">Total</p>
+                                    <h1 className="shopCart2_h1">₹{totalAmount}</h1>
+                                    <button className="logoBtn1 checkoutbtn" onClick={handlePaypalButton}>Checkout</button><br/><hr/><br/>
 
-                            <h3>Promotions</h3><br/>
-                            <input className="cartInput" name="coupen" placeholder="Enter Coupen"/>
-                            <button className="PromoBtn" onClick={applyPromo}>Apply</button>
-                        </div>
+                                    <h3>Promotions</h3><br/>
+                                    <input className="cartInput" name="coupen" placeholder="Enter Coupen"/>
+                                    <button className="PromoBtn" onClick={applyPromo}>Apply</button>
+                                </div>
+                            )}
+                                <div id="paypal-button-container"></div>
+                            </>
+                        ) : (
+                            <>  
+                                <button className="logoBtn1" onClick={goTOHome}>Learn More ....</button>
+                            </>
+                        )}        
                 </div>
             </div>
 

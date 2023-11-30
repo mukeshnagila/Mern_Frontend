@@ -14,6 +14,8 @@ import DataStore from "../Store/Data";
 import LoginPage from "../Authentication/LoginPage";
 import SignupPage from "../Authentication/SignupPage";
 import CartPage from "../Cart/CartPage";
+import MyLearning from "../MyLearning/MyLearning";
+import SearchProduct from "../SearchItem/SearchProduct";
 
 function RouteingFile(){
     return(
@@ -38,6 +40,8 @@ function RouteingFile(){
                             <Route path="/login" element={<LoginPage />} />
                             <Route path="/register" element={<SignupPage />} />
                             <Route path="/Cart" element={<CartPage />} />
+                            <Route path="/Mylearning" element={<MyLearning />} />
+                            <Route path="/SearchItem" element={<SearchProduct />} />
 
                     </Routes>
             </DataStore>    

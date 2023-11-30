@@ -43,7 +43,7 @@ function LoginPage() {
                             navi("/login")
                         }else if(res.data.message === "user logged in successfully"){
                             navi("/")
-                            // window.location.reload(true)
+                            window.location.reload(true)
                         }else{
                             navi("/register")
                         }

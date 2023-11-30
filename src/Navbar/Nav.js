@@ -1,8 +1,12 @@
 import React, { useEffect, useState } from "react";
 import "../Navbar/Nav.css";
 import { NavLink, useNavigate } from "react-router-dom";
+import { useSelector } from "react-redux";
+import axios from "axios";
 
 function Nav(){
+    
+    const totalItems = useSelector((state) => state.cart.items.reduce((total, item) => total + item.quantity, 0)) || 0;
 
     const [isDropdownVisible, setDropdownVisible] = useState(false);
     const [isTecDropdownVisible, setTecDropdownVisible] = useState(false);
@@ -60,6 +64,40 @@ function Nav(){
         nav('/login')
         window.location.reload(true)
     }
+
+
+    const [searchItem, setSearchItem] = useState("");
+    const handleInput = (e) => {
+        e.preventDefault();
+        setSearchItem(e.target.value);
+    }
+    const handleSearch = async () => {
+
+        if (!searchItem.trim()) {
+            alert('Please fill in the search field first.');
+            return;
+          }
+
+        try {
+            const response = await axios.get(`http://localhost:8008/api/search?searchItem=${searchItem}`);
+            const searchData = response.data;
+            console.log(response.data);
+            console.log(searchData.length);
+            if (searchData.length === 0) {
+                alert("Results not found!");
+                setSearchItem("");
+                nav("/");
+            }
+            else {
+                nav("/SearchItem", { state: { searchData, searchItem } });
+                setSearchItem("");
+            }
+        }
+        catch (err) {
+            console.log("Error searching:", err);
+        }
+    }
+
 
     return(
         <>
@@ -247,7 +285,7 @@ function Nav(){
                     </div>
                 </div>
                 <div className="serchbar1">
-                    <input className="serchbar" placeholder="Search for anything" />
+                    <input className="serchbar" style={{ fontSize: "16px" }} value={searchItem}  onChange={handleInput} placeholder="Search for anything"/><button className="searchiconBtn" onClick={handleSearch}><img className="searchicon" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxEh_35CCxsTtQsJ3yZCojZHqWBq2ny9sBhP0Mq_AfITKrCogKgSHYftY-giG-rBhHYjc&usqp=CAU" alt="searchimg" /></button>
                 </div>
                 <div className="login">
                     <button className="teachon dropdown" onMouseEnter={handleTecDropdownToggle} onMouseLeave={handleTecDropdownToggle}>Teach On Udemy
@@ -258,24 +296,29 @@ function Nav(){
                                 </div>
                         )}
                     </button>
-
-                    <button className="cartbtn"><NavLink to="/Cart"><img className="cartimg" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWBCXqF1rdOYnyCZjSGCFQXGOVCKLMcgnQyRYdvHeU4XkdGnhJ" alt="CartImg" /></NavLink>0</button>
+                {localStorage.getItem("token") ? (            
+                    <button className="cartbtn"><NavLink to="/Cart"><img className="cartimg" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWBCXqF1rdOYnyCZjSGCFQXGOVCKLMcgnQyRYdvHeU4XkdGnhJ" alt="CartImg" /></NavLink>{totalItems}</button>
+                ): (    
+                    <button className="cartbtn"><NavLink to="/login"><img className="cartimg" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWBCXqF1rdOYnyCZjSGCFQXGOVCKLMcgnQyRYdvHeU4XkdGnhJ" alt="CartImg" /></NavLink>{totalItems}</button>
+                )}
 
                     {tokenforAuth || userData ?
                         (<>
                             <div>
-                                <button className="teachon mylearning">My Learning</button>
+                                <button className="teachon mylearning"><NavLink to="/Mylearning" className="mylearning teachon">My Learning</NavLink></button>
                             </div>
-                                <button className="myProfile dropdown" onMouseEnter={handleProfilecDropdownToggle} onMouseLeave={handleProfilecDropdownToggle}>MN
+                                <button className="myProfile dropdown" onMouseEnter={handleProfilecDropdownToggle} onMouseLeave={handleProfilecDropdownToggle}>
+                                    {userData && userData.name? userData.name.split(" ").map(word => word[0].toUpperCase()).join(""): "U"}
+
                                 {IsProfilevisible && (
                                     <div className="dropdown-myProfile">
                                         <div className="afterlogin1">
                                                 <div className="afterlogin2">
-                                                    <h2>MN</h2>
+                                                    <h2>{userData && userData.name? userData.name.split(" ").map(word => word[0].toUpperCase()).join(""): "Profile"}</h2>
                                                 </div>
                                                 <div className="afterlogin3">
-                                                    <h3>Mukesh nagila</h3>
-                                                    <p>nagilamukesh43@gmail.com</p>
+                                                    <h3>{userData && userData.name ? userData.name.split(" ").slice(0, 2).map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(" ") : "Profile"}</h3>
+                                                    <p>{userData && userData.email ? userData.email : "User Email"}</p>
                                                 </div>
                                         </div><hr/><br/>
                                         <button className="signupbtn btn" onClick={handelLogout}>LogOut</button>

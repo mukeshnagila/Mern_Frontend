@@ -21,7 +21,7 @@ function SignupPage() {
         axios.post("https://mern-udemy-clone-backend.onrender.com/api/register", userdetail)
         // axios.post("http://localhost:8008/api/register", userdetail)
                 .then((res) => {alert(res.data.message)
-                return navi("/")})
+                return navi("/login")})
                 .catch((err) => console.log(err))
     }
 

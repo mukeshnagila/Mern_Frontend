@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom";
 import { store } from "../Store/Data";
 import AddCardBtn from "../Cart/AddToCart/BtnAddCart";
 
-    function FinanceAccounting(){
+function IT_Software(){
 
     const [Sdata] = useContext(store);
     // const [IsHovervisible, SetHoverVisible] = useState(false);
@@ -22,22 +22,21 @@ import AddCardBtn from "../Cart/AddToCart/BtnAddCart";
             return updatedVisibility;
         });
     };
-
     return(
         <>
             <div className="Nav2nd">
-                <h3>Finance & Accounting</h3>
+                <h3>IT & Software</h3>
                 <img className="Nav2nd_img" src="https://s.udemycdn.com/browse_components/link-bar/large-next.svg" alt="sign" />
-                <p className="Nav2nd_P"><NavLink className="Nav2nd_P2" to="/Finance_Accounting/Accounting_Bookkeeping">Accounting & Bookkeeping</NavLink></p>
-                <p className="Nav2nd_P"><NavLink className="Nav2nd_P2" to="/Finance_Accounting/Compliance">Compliance</NavLink></p>
-                <p className="Nav2nd_P"><NavLink className="Nav2nd_P2" to="/Finance_Accounting/Economic">Economic</NavLink></p>
-                <p className="Nav2nd_P"><NavLink className="Nav2nd_P2" to="/Finance_Accounting/Finance">Finance</NavLink></p>
-                <p className="Nav2nd_P"><NavLink className="Nav2nd_P2" to="/Finance_Accounting/Taxes">Taxes</NavLink></p>
+                <p className="Nav2nd_P"><NavLink className="Nav2nd_P2" to="/IT_Software/IT_Certification">IT Certification</NavLink></p>
+                <p className="Nav2nd_P"><NavLink className="Nav2nd_P2" to="/IT_Software/Network_Security">Network & Security</NavLink></p>
+                <p className="Nav2nd_P"><NavLink className="Nav2nd_P2" to="/IT_Software/Hardware">Hardware</NavLink></p>
+                <p className="Nav2nd_P"><NavLink className="Nav2nd_P2" to="/IT_Software/Operating_System">Operating system & Servers</NavLink></p>
+                <p className="Nav2nd_P"><NavLink className="Nav2nd_P2" to="/IT_Software/Other_ITSoftware">Other IT & Software</NavLink></p>
             </div>
 
             <div className="Communication">
                 
-                <h1 className="Communication_H1">Finance & Accounting Courses</h1>
+                <h1 className="Communication_H1">IT & Software Courses</h1>
                 <h2 className="Communication_H2">Courses to get you started</h2>
 
                 <div className="mostpopular">
@@ -45,7 +44,7 @@ import AddCardBtn from "../Cart/AddToCart/BtnAddCart";
 
                     <div className="mostpopcontent">
                                 
-                    {Sdata.filter((item) => item.category === "Finance_Accounting" && item.id % 7 === 0).map((item, index) => {
+                    {Sdata.filter((item) => item.category === "IT_Software" && item.id % 7 === 0).map((item, index) => {
                             return(
                                 <>                        
                                     <div key={index} className="Startmostpop_item dropdown" onMouseEnter={() => handleHoverDropdownToggle(index)} onMouseLeave={() => handleHoverDropdownToggle(index)}>
@@ -247,7 +246,7 @@ import AddCardBtn from "../Cart/AddToCart/BtnAddCart";
                             </div>
 
                             <div className="forBLast_content">
-                            {Sdata.filter((item) => item.category === "Finance_Accounting" && item.id % 8 === 0).map((item, index) => {
+                            {Sdata.filter((item) => item.category === "IT_Software" && item.id % 8 === 0).map((item, index) => {
                             return(
                                 <>
                                 <div className="forBLast_content_item">
@@ -291,4 +290,4 @@ import AddCardBtn from "../Cart/AddToCart/BtnAddCart";
     )
 }
 
-export default FinanceAccounting;
+export default IT_Software;

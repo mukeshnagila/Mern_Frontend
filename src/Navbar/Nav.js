@@ -137,27 +137,27 @@ function Nav(){
                                                     <div className="start-2nddropdown">
                                                         <div className="dropdown-content">
                                                             <ul>
-                                                                <li className="lionhover">Accounting & Bookkeeping</li>
-                                                                <li className="lionhover">Compliance</li>
-                                                                <li className="lionhover">Economic</li>
-                                                                <li className="lionhover">Finance</li>
-                                                                <li className="lionhover">Taxes</li>
+                                                                <li className="lionhover"><NavLink to="/Finance_Accounting/Accounting_Bookkeeping">Accounting & Bookkeeping</NavLink></li>
+                                                                <li className="lionhover"><NavLink to="/Finance_Accounting/Compliance">Compliance</NavLink></li>
+                                                                <li className="lionhover"><NavLink to="/Finance_Accounting/Economic">Economic</NavLink></li>
+                                                                <li className="lionhover"><NavLink to="/Finance_Accounting/Finance">Finance</NavLink></li>
+                                                                <li className="lionhover"><NavLink to="/Finance_Accounting/Taxes">Taxes</NavLink></li>
                                                             </ul>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </li>
 
-                                            <li className="lionhover">IT & Software
+                                            <li className="lionhover"><NavLink to="/IT_Software">IT & Software</NavLink>
                                                 <div className="business-dropdown">
                                                     <div className="start-2nddropdown">
                                                         <div className="dropdown-content">
                                                             <ul>
-                                                                <li className="lionhover">IT Certification</li>
-                                                                <li className="lionhover">Network & Security</li>
-                                                                <li className="lionhover">Hardware</li>
-                                                                <li className="lionhover">Operating system & Servers</li>
-                                                                <li className="lionhover">Other IT & Software</li>
+                                                                <li className="lionhover"><NavLink to="/IT_Software/IT_Certification">IT Certification</NavLink></li>
+                                                                <li className="lionhover"><NavLink to="/IT_Software/Network_Security">Network & Security</NavLink></li>
+                                                                <li className="lionhover"><NavLink to="/IT_Software/Hardware">Hardware</NavLink></li>
+                                                                <li className="lionhover"><NavLink to="/IT_Software/Operating_System">Operating system & Servers</NavLink></li>
+                                                                <li className="lionhover"><NavLink to="/IT_Software/Other_ITSoftware">Other IT & Software</NavLink></li>
                                                             </ul>
                                                         </div>
                                                     </div>

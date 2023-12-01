@@ -1,17 +1,12 @@
 import React, { useContext, useState } from "react";
-import "../Components/BusinessCompo/Business.css";
+import "../BusinessCompo/Business.css";
 import { NavLink } from "react-router-dom";
-import { store } from "../Store/Data";
-import AddCardBtn from "../Cart/AddToCart/BtnAddCart";
+import { store } from "../../Store/Data";
+import AddCardBtn from "../../Cart/AddToCart/BtnAddCart";
 
-    function FinanceAccounting(){
+function Hardware(){
 
     const [Sdata] = useContext(store);
-    // const [IsHovervisible, SetHoverVisible] = useState(false);
-
-    // const handleHoverDropdownToggle = () => {
-    //     SetHoverVisible(!IsHovervisible);
-    // };
 
     const [isHoverVisible, setIsHoverVisible] = useState(Array(Sdata.length).fill(false));
 
@@ -26,18 +21,18 @@ import AddCardBtn from "../Cart/AddToCart/BtnAddCart";
     return(
         <>
             <div className="Nav2nd">
-                <h3>Finance & Accounting</h3>
+                <h3>IT & Software</h3>
                 <img className="Nav2nd_img" src="https://s.udemycdn.com/browse_components/link-bar/large-next.svg" alt="sign" />
-                <p className="Nav2nd_P"><NavLink className="Nav2nd_P2" to="/Finance_Accounting/Accounting_Bookkeeping">Accounting & Bookkeeping</NavLink></p>
-                <p className="Nav2nd_P"><NavLink className="Nav2nd_P2" to="/Finance_Accounting/Compliance">Compliance</NavLink></p>
-                <p className="Nav2nd_P"><NavLink className="Nav2nd_P2" to="/Finance_Accounting/Economic">Economic</NavLink></p>
-                <p className="Nav2nd_P"><NavLink className="Nav2nd_P2" to="/Finance_Accounting/Finance">Finance</NavLink></p>
-                <p className="Nav2nd_P"><NavLink className="Nav2nd_P2" to="/Finance_Accounting/Taxes">Taxes</NavLink></p>
+                <p className="Nav2nd_P"><NavLink className="Nav2nd_P2" to="/IT_Software/IT_Certification">IT Certification</NavLink></p>
+                <p className="Nav2nd_P"><NavLink className="Nav2nd_P2" to="/IT_Software/Network_Security">Network & Security</NavLink></p>
+                <p className="Nav2nd_P"><NavLink className="Nav2nd_P2" to="/IT_Software/Hardware">Hardware</NavLink></p>
+                <p className="Nav2nd_P"><NavLink className="Nav2nd_P2" to="/IT_Software/Operating_System">Operating system & Servers</NavLink></p>
+                <p className="Nav2nd_P"><NavLink className="Nav2nd_P2" to="/IT_Software/Other_ITSoftware">Other IT & Software</NavLink></p>
             </div>
 
             <div className="Communication">
                 
-                <h1 className="Communication_H1">Finance & Accounting Courses</h1>
+                <h1 className="Communication_H1">Hardware Courses</h1>
                 <h2 className="Communication_H2">Courses to get you started</h2>
 
                 <div className="mostpopular">
@@ -45,7 +40,7 @@ import AddCardBtn from "../Cart/AddToCart/BtnAddCart";
 
                     <div className="mostpopcontent">
                                 
-                    {Sdata.filter((item) => item.category === "Finance_Accounting" && item.id % 7 === 0).map((item, index) => {
+                    {Sdata.filter((item) => item.subcategory === "Hardware").map((item, index) => {
                             return(
                                 <>                        
                                     <div key={index} className="Startmostpop_item dropdown" onMouseEnter={() => handleHoverDropdownToggle(index)} onMouseLeave={() => handleHoverDropdownToggle(index)}>
@@ -91,7 +86,7 @@ import AddCardBtn from "../Cart/AddToCart/BtnAddCart";
                                     </div>
                                 </>
                             )
-                        })}
+                        })} 
                     </div>
                 </div>
             </div>
@@ -100,17 +95,17 @@ import AddCardBtn from "../Cart/AddToCart/BtnAddCart";
                 <hr/>
                         <div className="ASchild1">
                                 <div className="ASmini">
-                                    <img className="ASmini_img" src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTJRacqYivS-UjxhOO4UPc3f3ryzORPIDByID2o7We26oiIEp5H" alt="FinanceAccountingImage" />
+                                    <img className="ASmini_img" src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTJRacqYivS-UjxhOO4UPc3f3ryzORPIDByID2o7We26oiIEp5H" alt="ManagementImage" />
                                     <h2 className="ASmini_H2">Learn in-demand skills with over 210,000 video courses</h2>
                                 </div>
 
                                 <div className="ASmini">
-                                    <img className="ASmini_img" src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTYLtySaxciI_EyNE3L5_LsDe8iUpXkykWl46N_faJqYhza_hmX" alt="FinanceAccountingImage" />
+                                    <img className="ASmini_img" src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTYLtySaxciI_EyNE3L5_LsDe8iUpXkykWl46N_faJqYhza_hmX" alt="ManagementImage" />
                                     <h2 className="ASmini_H2">Choose courses taught by real-world experts</h2>
                                 </div>
 
                                 <div className="ASmini">
-                                    <img className="ASmini_img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQTYkKsByAwOOOEo961Xlhj0Q87RgLIWJZCIP6omGLekWRLTFLH" alt="FinanceAccountingImage" />
+                                    <img className="ASmini_img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQTYkKsByAwOOOEo961Xlhj0Q87RgLIWJZCIP6omGLekWRLTFLH" alt="ManagementImage" />
                                     <h2 className="ASmini_H2">Learn at your own pace, with lifetime access on mobile and desktop</h2>
                                 </div>  
                         </div>
@@ -120,16 +115,16 @@ import AddCardBtn from "../Cart/AddToCart/BtnAddCart";
             <div className="PopularSec">
                     <h2>Popular topics</h2>
                     <div className="popular_topic">
-                            <button className="popular_topic_Btn">Stock Trading</button>
-                            <button className="popular_topic_Btn">Financial Analysis</button>
-                            <button className="popular_topic_Btn">Accounting</button>
-                            <button className="popular_topic_Btn">Crypticurrency</button>
-                            <button className="popular_topic_Btn">Financial Modeline</button>
-                            <button className="popular_topic_Btn">Investing</button>
-                            <button className="popular_topic_Btn">Forex Trading</button>
-                            <button className="popular_topic_Btn">Tecnical Analysis</button>
-                            <button className="popular_topic_Btn">Algorithmic Trading</button>
-                            <button className="popular_topic_Btn">Financial Markets</button>
+                            <button className="popular_topic_Btn">Product Management</button>
+                            <button className="popular_topic_Btn">Management Skills</button>
+                            <button className="popular_topic_Btn">Project Management</button>
+                            <button className="popular_topic_Btn">Quality Management</button>
+                            <button className="popular_topic_Btn">Risk Management</button>
+                            <button className="popular_topic_Btn">Leadership</button>
+                            <button className="popular_topic_Btn">ISO 9001</button>
+                            <button className="popular_topic_Btn">Business Strategy</button>
+                            <button className="popular_topic_Btn">Manager Training</button>
+                            <button className="popular_topic_Btn">PMI Project Management Professional (PMP)</button>
                     </div>
             </div>
 
@@ -137,7 +132,7 @@ import AddCardBtn from "../Cart/AddToCart/BtnAddCart";
                 <h2>Popular Instructors</h2>
                 <div className="popular_Ins_item">
                         <div className="Ins_item_1">
-                                <img className="Ins_item_1_Img" src="https://img-c.udemycdn.com/user/75x75/2565950_892c_2.jpg" alt="FinanceAccountingimage" />
+                                <img className="Ins_item_1_Img" src="https://img-c.udemycdn.com/user/75x75/2565950_892c_2.jpg" alt="Managementimage" />
                                 <div className="Ins_mini_item">
                                     <h3>TJ Walker</h3>
                                     <p>Communication Skills, Public Speaking</p>
@@ -148,7 +143,7 @@ import AddCardBtn from "../Cart/AddToCart/BtnAddCart";
                         </div>
 
                         <div className="Ins_item_1">
-                                <img className="Ins_item_1_Img" src="https://img-c.udemycdn.com/user/75x75/22101060_9158_2.jpg" alt="FinanceAccountingimage" />
+                                <img className="Ins_item_1_Img" src="https://img-c.udemycdn.com/user/75x75/22101060_9158_2.jpg" alt="Managementimage" />
                                 <div className="Ins_mini_item">
                                     <h3>Jessica Brody</h3>
                                     <p>Fiction Writing, Creative Writing</p>
@@ -159,7 +154,7 @@ import AddCardBtn from "../Cart/AddToCart/BtnAddCart";
                         </div>
 
                         <div className="Ins_item_1">
-                                <img className="Ins_item_1_Img" src="https://img-c.udemycdn.com/user/75x75/1681918_d7a1_7.jpg" alt="FinanceAccountingimage" />
+                                <img className="Ins_item_1_Img" src="https://img-c.udemycdn.com/user/75x75/1681918_d7a1_7.jpg" alt="Managementimage" />
                                 <div className="Ins_mini_item">
                                     <h3>Shani Raja</h3>
                                     <p>Writing, Writing Editing</p>
@@ -170,7 +165,7 @@ import AddCardBtn from "../Cart/AddToCart/BtnAddCart";
                         </div>
 
                         <div className="Ins_item_1">
-                                <img className="Ins_item_1_Img" src="	https://img-c.udemycdn.com/user/75x75/14942868_3ed6_38.jpg" alt="FinanceAccountingimage" />
+                                <img className="Ins_item_1_Img" src="	https://img-c.udemycdn.com/user/75x75/14942868_3ed6_38.jpg" alt="Managementimage" />
                                 <div className="Ins_mini_item">
                                     <h3>TJ Walker</h3>
                                     <p>Chris Haroun | 1.4 Million Students |</p>
@@ -185,7 +180,7 @@ import AddCardBtn from "../Cart/AddToCart/BtnAddCart";
             <div className="allCcource">
                 <h2>All Communication courses</h2><br/>
                 <div className="fornotsure">
-                    <img className="fornotsureImg" src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRSK4XX5P0UrM-P8ULiT516j5e8Di-dH32AfbdEe7pHsqAPP0tB" alt="FinanceAccountingimage" />
+                    <img className="fornotsureImg" src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRSK4XX5P0UrM-P8ULiT516j5e8Di-dH32AfbdEe7pHsqAPP0tB" alt="Managementimage" />
                     <h3>Not sure? All courses have a 30-day money-back guarantee</h3>
                 </div>    
             </div> 
@@ -247,7 +242,7 @@ import AddCardBtn from "../Cart/AddToCart/BtnAddCart";
                             </div>
 
                             <div className="forBLast_content">
-                            {Sdata.filter((item) => item.category === "Finance_Accounting" && item.id % 8 === 0).map((item, index) => {
+                            {Sdata.filter((item) => item.subcategory === "Hardware").map((item, index) => {
                             return(
                                 <>
                                 <div className="forBLast_content_item">
@@ -291,4 +286,4 @@ import AddCardBtn from "../Cart/AddToCart/BtnAddCart";
     )
 }
 
-export default FinanceAccounting;
+export default Hardware;

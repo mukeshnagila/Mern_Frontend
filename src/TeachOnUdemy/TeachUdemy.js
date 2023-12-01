@@ -153,7 +153,7 @@ function TeachUdemy() {
                             <h1>You won’t have to do it alone</h1><br/>
                             <p className="foralone222">Our <span className="alonespan">Instructor Support Team</span> is here to answer your questions and review your test video, while our <span className="alonespan">Teaching Center</span> gives you plenty of resources to help you through the process. Plus, get the support of experienced instructors in our <span className="alonespan">online community.</span></p><br/>
 
-                            <a className="foralong_a">Need more detailsbefoure you start? Learn more.</a>
+                            <p className="foralong_a">Need more detailsbefoure you start? Learn more.</p>
                     </div>
 
                     <div className="foralone1">

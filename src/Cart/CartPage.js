@@ -121,6 +121,7 @@ function CartPage() {
                     try {
                         const details = await actions.order.capture();
                         dispatch(placeOrderAction());
+                        console.log(details);
 
                         const purchasedCourses = cartItems;
                         dispatch(addPurchasedCourses(purchasedCourses));

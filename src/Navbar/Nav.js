@@ -288,7 +288,7 @@ function Nav(){
                     <input className="serchbar" style={{ fontSize: "16px" }} value={searchItem}  onChange={handleInput} placeholder="Search for anything"/><button className="searchiconBtn" onClick={handleSearch}><img className="searchicon" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxEh_35CCxsTtQsJ3yZCojZHqWBq2ny9sBhP0Mq_AfITKrCogKgSHYftY-giG-rBhHYjc&usqp=CAU" alt="searchimg" /></button>
                 </div>
                 <div className="login">
-                    <button className="teachon dropdown" onMouseEnter={handleTecDropdownToggle} onMouseLeave={handleTecDropdownToggle}>Teach On Udemy
+                    <button className="teachon dropdown" onMouseEnter={handleTecDropdownToggle} onMouseLeave={handleTecDropdownToggle}><NavLink to="/TeachUdemy" className="mylearning teachon">Teach On Udemy</NavLink>
                         {isTecDropdownVisible && (
                                 <div className="dropdown-teachon">
                                     <h3>Turn what you know into an opportunity and reach millions around the world.</h3>

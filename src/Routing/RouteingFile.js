@@ -26,6 +26,7 @@ import ITCertification from "../Components/IT_Software/IT_Certification";
 import NetworkSecurity from "../Components/IT_Software/Network_Security";
 import OperatingSystem from "../Components/IT_Software/Operating_System";
 import OtherITSoftware from "../Components/IT_Software/Other_ITSoftware";
+import TeachUdemy from "../TeachOnUdemy/TeachUdemy";
 import ITSoftware from "../MainComponent/IT_Software";
 
 function RouteingFile(){
@@ -67,6 +68,7 @@ function RouteingFile(){
                             <Route path="/Cart" element={<CartPage />} />
                             <Route path="/Mylearning" element={<MyLearning />} />
                             <Route path="/SearchItem" element={<SearchProduct />} />
+                            <Route path="/TeachUdemy" element={<TeachUdemy />} />
 
                     </Routes>
             </DataStore>    

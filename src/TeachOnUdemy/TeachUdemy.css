@@ -1,0 +1,216 @@
+.Techudemy{
+    padding: 0% 7%;
+    object-fit: cover;
+    background-color: #ededed;
+}
+
+.TuContainer1 {
+    background-image: url("https://s.udemycdn.com/teaching/billboard-desktop-v4.jpg");
+    height: 600px;
+    width: 100%;
+    background-size: 100% 80%;
+    background-repeat: no-repeat;
+}
+
+.TuContainer1_item1{
+    padding: 0 0 0 3.2rem;
+    position: absolute;
+    top: 40%;
+    left: 20%;
+    transform: translate(-50%,-50%);
+    width: 25%;
+}
+
+.get_start_btn{
+    background-color: #2d2f31;
+    color: #fff;
+    font-weight: 700;
+    font-size: 20px;
+    width: 100%;
+    height: 50px;
+    padding: 2% 5%;
+}
+.get_start_btn:hover{
+    cursor: pointer;
+    background-color: black;
+}
+
+.TuContainer1_item1_H1{
+    font-size: 55px;
+    line-height: 50px;
+}
+
+.TuContainer1_item2{
+    padding: 3% 8%;
+}
+
+.TuContainer1_item2_h1{
+    font-size: 38px;
+    color: #2d2f31;
+    text-align: center;
+}
+
+.TuContainer1_item2_part1{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.TuContainer1_item2_part1_1{
+    width: 100%;
+    text-align: center;
+}
+
+.Reson_p{
+    padding: 0% 20%;
+}
+
+.information{
+    background-color: #5624d0;
+    color: #fff;
+    padding: 4rem 0;
+}
+
+.information_1{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding: 0;
+}
+
+.information_1_1{
+    text-align: center;
+}
+
+.information_1_1_h1{
+    font-size: 35px;
+    font-weight: 700;
+}
+
+.HowToBeing{
+    padding: 0% 18%;
+}
+
+.HowToBeing_h1{
+    text-align: center;
+}
+
+.HowToBeing_route{
+    display: flex;
+    justify-content: space-between;
+}
+
+.HowToBeing_route_h2{
+    color: #535454;
+    cursor: pointer;
+    padding-bottom: 1%;
+    border-bottom: 2px solid transparent;
+    padding-bottom: 1%;
+}
+.HowToBeing_route_h2:hover{
+    color: black;
+    border-color: black;
+}
+
+.HowToBeing_route_h2.active {
+    font-weight: bold;
+    border-color: black;
+    color: black;
+}
+
+.HowToBeing_content{
+    display: flex;
+    justify-content: space-around;
+}
+
+.HowToBeing_content1{
+    width: 100%;
+    line-height: 28px;
+    padding-top: 5%;
+}
+
+.HowToBeing_content1_p{
+    font-size: 1.2rem;
+}
+
+.HowToBeing_content11{
+    padding: 0%;
+}
+
+.peopleReview{
+    background-color: #f7f9fa;
+    display: flex;
+    padding: 0% 20%;
+    justify-content: space-around;
+}
+
+.peopleReview_img{
+    width: 100%;
+}
+
+.peopleReview_content{
+    padding: 0% 5%;
+}
+
+.HowToBeing_content1_p2{
+    font-size: 1.6rem;
+    padding: 8% 0%;
+}
+
+.foralone{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5% 0%;
+}
+
+.foralone1{
+    width: 100%;
+}
+
+.foralone111{
+    text-align: center;
+}
+
+.foralone222{
+    font-size: 18px;
+}
+
+.alonespan{
+    font-weight: 700;
+}
+
+.foralong_a{
+    color: #5624d0;
+    text-decoration: underline;
+    cursor: pointer;
+    font-weight: 700;
+}
+
+.lasttechme{
+    background-color: #f7f9fa;
+    padding: 5% 30%;
+    text-align: center;
+}
+
+.lasttechme_h{
+    font-size: 40px;
+    line-height: 25px;
+}
+
+.lasttechme_p{
+    font-size: 25px;
+    line-height: 38px;
+}
+
+.lasttechme_btn{
+    width: 50%;
+    height: 50px;
+    background-color: black;
+    color: #fff;
+    font-size: 20px;
+}
+.lasttechme_btn:hover{
+    background-color: #2d2f31;
+    cursor: pointer;
+}

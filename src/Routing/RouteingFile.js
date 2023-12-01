@@ -22,7 +22,7 @@ import Finance from "../Components/Finance_Accounting/Finance";
 import Taxes from "../Components/Finance_Accounting/Taxes";
 import FinanceAccounting from "../MainComponent/Finance_Accounting";
 import Hardware from "../Components/IT_Software/Hardware";
-import IT_Certification from "../Components/IT_Software/IT_Certification";
+import ITCertification from "../Components/IT_Software/IT_Certification";
 import NetworkSecurity from "../Components/IT_Software/Network_Security";
 import OperatingSystem from "../Components/IT_Software/Operating_System";
 import OtherITSoftware from "../Components/IT_Software/Other_ITSoftware";
@@ -54,7 +54,7 @@ function RouteingFile(){
 
                             <Route path="/IT_Software" element={<ITSoftware />} />
                             <Route path="/IT_Software/Hardware" element={<Hardware />} />
-                            <Route path="/IT_Software/IT_Certification" element={<IT_Certification />} />
+                            <Route path="/IT_Software/IT_Certification" element={<ITCertification />} />
                             <Route path="/IT_Software/Network_Security" element={<NetworkSecurity />} />
                             <Route path="/IT_Software/Operating_System" element={<OperatingSystem />} />
                             <Route path="/IT_Software/Other_ITSoftware" element={<OtherITSoftware />} />

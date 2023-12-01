@@ -257,8 +257,8 @@ function Business(){
 
                                         <div className="forBLast_content_item2">
                                             <h3>{item.name}</h3>
-                                            <p>Become an Effective Communicator And Learn How to Get Your Message Across By Learning Communication Fundamentals</p><br/>
-                                            <p className="forlastcolor">Life Progression Project, Lorraine Wiseman</p>
+                                            <p>{item.discr}</p><br/>
+                                            <p className="forlastcolor">{item.Wname}</p>
                                             <div className="Bforstart LastBforstart">
                                                     <h3>4.5</h3>
                                                     <div class="star"></div>

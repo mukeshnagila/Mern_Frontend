@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom";
 import { store } from "../../Store/Data";
 import AddCardBtn from "../../Cart/AddToCart/BtnAddCart";
 
-function IT_Certification(){
+function ITCertification(){
 
     const [Sdata] = useContext(store);
 
@@ -286,4 +286,4 @@ function IT_Certification(){
     )
 }
 
-export default IT_Certification;
+export default ITCertification;

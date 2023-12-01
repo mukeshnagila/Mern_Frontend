@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom";
 import { store } from "../../Store/Data";
 import AddCardBtn from "../../Cart/AddToCart/BtnAddCart";
 
-function Operating_System(){
+function OperatingSystem(){
 
     const [Sdata] = useContext(store);
 
@@ -286,4 +286,4 @@ function Operating_System(){
     )
 }
 
-export default Operating_System;
+export default OperatingSystem;

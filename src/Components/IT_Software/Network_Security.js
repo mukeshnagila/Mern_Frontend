@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom";
 import { store } from "../../Store/Data";
 import AddCardBtn from "../../Cart/AddToCart/BtnAddCart";
 
-function Network_Security(){
+function NetworkSecurity(){
 
     const [Sdata] = useContext(store);
 
@@ -286,4 +286,4 @@ function Network_Security(){
     )
 }
 
-export default Network_Security;
+export default NetworkSecurity;

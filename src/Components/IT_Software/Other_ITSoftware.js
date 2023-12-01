@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom";
 import { store } from "../../Store/Data";
 import AddCardBtn from "../../Cart/AddToCart/BtnAddCart";
 
-function Other_ITSoftware(){
+function OtherITSoftware(){
 
     const [Sdata] = useContext(store);
 
@@ -286,4 +286,4 @@ function Other_ITSoftware(){
     )
 }
 
-export default Other_ITSoftware;
+export default OtherITSoftware;

@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom";
 import { store } from "../Store/Data";
 import AddCardBtn from "../Cart/AddToCart/BtnAddCart";
 
-function IT_Software(){
+function ITSoftware(){
 
     const [Sdata] = useContext(store);
     // const [IsHovervisible, SetHoverVisible] = useState(false);
@@ -290,4 +290,4 @@ function IT_Software(){
     )
 }
 
-export default IT_Software;
+export default ITSoftware;

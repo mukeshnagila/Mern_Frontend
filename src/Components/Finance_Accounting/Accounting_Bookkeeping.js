@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom";
 import { store } from "../../Store/Data";
 import AddCardBtn from "../../Cart/AddToCart/BtnAddCart";
 
-function Accounting_Bookkeeping(){
+function AccountingBookkeeping(){
 
     const [Sdata] = useContext(store);
 
@@ -286,4 +286,4 @@ function Accounting_Bookkeeping(){
     )
 }
 
-export default Accounting_Bookkeeping;
+export default AccountingBookkeeping;

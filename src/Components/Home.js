@@ -1,16 +1,20 @@
 import React from "react";
 import "../Components/Style.css";
+import ImageSlider from "../Slider/Slider";
 
 function Home() {
     return(
         <>
-            <div>
+            <div className="iflogin">
                 <img className="homeImage" src="https://img-c.udemycdn.com/notices/web_carousel_slide/image/1c1f8809-69ec-43d7-8770-a145a714df9e.jpg" alt="HomeImg" />
                 <div className="Banner">
                     <h1>Black Friday Sale ends tonight</h1>
                     <p>Save big on the skills that could change everything. Get courses for as low as ₹389.</p>
                 </div>
             </div><br/><br/>
+            <div className="ifnotlogin">
+                <ImageSlider />
+            </div>
 
             <div className="company">
                 <div className="companyA">
@@ -412,42 +416,42 @@ function Home() {
                     <div className="Top_cat">
                         <div className="Top_cat1">
                             <img className="Top_cat_img" src="https://s.udemycdn.com/home/top-categories/lohp-category-design-v2.jpg" alt="Homeimage" />
-                            <h4 className="Top_cat_H4">Design</h4>
+                            <h4 className="Top_cat_H4 Top_cat_H4_Btn">Design</h4>
                         </div>
 
                         <div className="Top_cat1">
                             <img className="Top_cat_img" src="https://s.udemycdn.com/home/top-categories/lohp-category-development-v2.jpg" alt="Homeimage" />
-                            <h4 className="Top_cat_H4">Development</h4>
+                            <h4 className="Top_cat_H4 Top_cat_H4_Btn">Development</h4>
                         </div>
 
                         <div className="Top_cat1">
                             <img className="Top_cat_img" src="https://s.udemycdn.com/home/top-categories/lohp-category-marketing-v2.jpg" alt="Homeimage" />
-                            <h4 className="Top_cat_H4">Marketing</h4>
+                            <h4 className="Top_cat_H4 Top_cat_H4_Btn">Marketing</h4>
                         </div>
 
                         <div className="Top_cat1">
                             <img className="Top_cat_img" src="https://s.udemycdn.com/home/top-categories/lohp-category-it-and-software-v2.jpg" alt="Homeimage" />
-                            <h4 className="Top_cat_H4">IT and Software</h4>
+                            <h4 className="Top_cat_H4 Top_cat_H4_Btn">IT and Software</h4>
                         </div>
 
                         <div className="Top_cat1">
                             <img className="Top_cat_img" src="https://s.udemycdn.com/home/top-categories/lohp-category-personal-development-v2.jpg" alt="Homeimage" />
-                            <h4 className="Top_cat_H4">Personal Development</h4>
+                            <h4 className="Top_cat_H4 Top_cat_H4_Btn">Personal Development</h4>
                         </div>
 
                         <div className="Top_cat1">
                             <img className="Top_cat_img" src="https://s.udemycdn.com/home/top-categories/lohp-category-business-v2.jpg" alt="Homeimage" />
-                            <h4 className="Top_cat_H4">Business</h4>
+                            <h4 className="Top_cat_H4 Top_cat_H4_Btn">Business</h4>
                         </div>
 
                         <div className="Top_cat1">
                             <img className="Top_cat_img" src="https://s.udemycdn.com/home/top-categories/lohp-category-photography-v2.jpg" alt="Homeimage" />
-                            <h4 className="Top_cat_H4">Photography</h4>
+                            <h4 className="Top_cat_H4 Top_cat_H4_Btn">Photography</h4>
                         </div>
 
                         <div className="Top_cat1">
                             <img className="Top_cat_img" src="https://s.udemycdn.com/home/top-categories/lohp-category-music-v2.jpg" alt="Homeimage" />
-                            <h4 className="Top_cat_H4">Music</h4>
+                            <h4 className="Top_cat_H4 Top_cat_H4_Btn">Music</h4>
                         </div>
                     </div><br/><br/>
             </div>

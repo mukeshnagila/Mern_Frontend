@@ -302,3 +302,77 @@
     background-color: #fff;
     cursor: pointer;
   }
+
+  .navmobile{
+    display: none;
+  }
+
+
+/* ///////////////////////////// Media Quairy for Mobile ///////////////////////////////// */
+
+  @media only screen and (min-width:200px) and (max-width:800px) {
+      .nav{
+        display: none;
+      }
+
+      .navmobile{
+        padding: 1% 1%;
+        background-color: #fff;
+        display: block;
+        /* height: 100px; */
+        align-items: center;
+        box-shadow: 0 2px 4px rgba(0,0,0,.08), 0 4px 12px rgba(0,0,0,.08);
+      }
+
+      .menu{
+        position: absolute;
+        top: 0.75rem;
+        left: 0.5rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 2.25rem;
+        height: 1.8rem;
+        cursor: pointer;
+    }
+
+    .menu span {
+            height: 0.4rem;
+            width: 100%;
+            background-color: #2d2f31;
+            border-radius: 0.2rem;
+    }
+
+    .navmobile_start{
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+    }
+
+    .menuspace{
+        width: 30%;
+    }
+
+    .login > * {
+        margin-right: 0%;
+    }
+
+    .login{
+        margin-left: 5%;
+    }
+
+    .serchbar1{
+        padding-left: 0%;
+        margin-left: 0%;
+        justify-content: flex-end;
+    }
+
+    .searchicon {
+      width: 30px;
+      height: 30px;
+    }
+    
+    .menuspace{
+      padding-left: 0%;
+    }
+} 

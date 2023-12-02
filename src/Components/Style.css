@@ -507,3 +507,169 @@
     background-color: black;
     cursor: pointer;
 }
+
+
+
+
+/* /////////////////////////////////// Media Quary For Phone ///////////////////////////////// */
+
+@media only screen and (min-width:200px) and (max-width:800px) {
+    
+    .Banner{
+        display: none;
+    }
+
+    .companyH2{
+        font-size: 1.0rem;
+    }
+
+    .B_section_chold{
+        text-align: center;
+    }
+
+    .b_section_para{
+        font-size: 1.0rem;
+        text-align: center;
+    }
+
+    .subInfo{
+        width: 100%;
+        padding-top: 5%;
+    }
+
+    .subInfoimg{
+        width: 60%;
+        height: 210px;
+        margin-left: 20%;
+    }
+
+    .goals_items{
+        display: block;
+    }
+
+    .Gitem_1{
+        width: auto;
+        margin-bottom: 5%;
+    }
+
+    .learners_A{
+        display: block;
+    }
+
+    .ByCategory{
+        margin-top: 10%;
+    }
+
+    .CF1{
+        width: 150px;
+    }
+
+    .ExploreBTN{
+        width: 100%;
+        height: 50px;
+    }
+
+    .Udemy_business{
+        flex-direction: column-reverse;
+    }
+
+    .UB1_image{
+        width: 22vh;
+        height: 48px;
+        padding-left: 20%;
+    }
+
+    .UB1_H3{
+        padding-left: 7%;
+        text-align: center;
+        padding-top: 0%;
+        font-size: medium;
+    }
+
+    .forul{
+        padding-left: 10%;
+    }
+
+
+    .Udemy_Business_btn{
+        width: 100%;
+    }
+
+    .Lern_more{
+        width: 100%;
+        margin-top: 5%;
+    }
+
+    .storycontent{
+        width: 100%;
+    }
+
+    .storyprofile{
+        width: 100%;
+    }
+
+    .story{
+        padding: 1% 2%;
+    }
+
+    .storyA{
+        width: 95%;
+        display: block;
+    }
+
+    .forlastsection{
+        display: block;
+    }
+
+    .forlastsectionA{
+        justify-content: center;
+    }
+
+    .forlastsectionA img{
+        margin-right: 20%;
+    }
+
+    .forlastsectionB{
+        padding: 0% 0%;
+    }
+
+    .forlastsectionB h1{
+        font-size: x-large;
+    }
+
+    .forlastsectionB_p{
+        font-size: 1.0rem;
+    }
+
+    .startteachingBTN{
+        width: 100%;
+    }
+
+    .B_section_btn{
+        display: block;
+    }
+
+    .Top_cat_img{
+        display: none;
+    }
+
+    .Top_cat1{
+        margin-bottom: 5%;
+        height: auto;
+        width: 45%;
+    }
+
+    .Top_cat_H4_Btn{
+        min-width: 50px;
+        min-height: 25px;
+        border-radius: 25px;
+        border: 1px solid #262728;
+        padding: 12% 15%;
+        text-align: center;
+    }
+    .Top_cat_H4_Btn:hover{
+        background-color: black;
+        color: #fff;
+    }
+
+}

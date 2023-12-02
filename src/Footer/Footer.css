@@ -84,3 +84,46 @@
     color: #fff;
     font-size: 12px;
 }
+
+
+/* //////////////////////////////////// Media Quary for Mobile //////////////////////////////// */
+
+
+@media only screen and (min-width:200px) and (max-width:800px) {
+ 
+    .footercontent{
+        flex-direction: column-reverse;
+    }
+
+    .Fbox1{
+        margin-left: 3%;
+        display: block;
+        margin-top: 5%;
+    }
+
+    .FContent{
+        float: left;
+    }
+
+    .Fbutton{
+        width: 180px;
+    }
+
+    .lastfooter{
+        display: block;
+        margin-top: -50px;
+        height: 80px;
+    }
+
+    .Lfooter_img{
+        padding-left: 3%;
+    }
+
+    .LFooter2{
+        width: 95%;
+        float: left;
+        padding-left: 3%;
+    }
+
+}
+

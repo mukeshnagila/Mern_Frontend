@@ -1,0 +1,42 @@
+
+.slider{
+    width: 90%;
+    height: 600px;
+    padding: 0% 5%;
+}
+
+.image-slider {
+    position: relative;
+  }
+  
+  .image-slider img {
+    max-width: 100%;
+    height: 300px;
+  }
+  
+  .slider-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    font-size: 25px;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .slider-arrow:hover {
+    background: rgba(0, 0, 0, 0.7);
+  }
+  
+  .prev {
+    left: 50px;
+  }
+  
+  .next {
+    right: 50px;
+  }

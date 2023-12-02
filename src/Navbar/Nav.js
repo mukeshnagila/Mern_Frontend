@@ -3,6 +3,7 @@ import "../Navbar/Nav.css";
 import { NavLink, useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
 import axios from "axios";
+import { IoSearchSharp } from "react-icons/io5";
 
 function Nav(){
     
@@ -97,6 +98,8 @@ function Nav(){
             console.log("Error searching:", err);
         }
     }
+
+    const [menuOpen, SetMenuOpen] = useState(false);
 
 
     return(
@@ -336,6 +339,39 @@ function Nav(){
                     
                        
                 </div>
+            </div>
+
+            <div className="navmobile">
+                    <div className="navmobile_start">
+                            <div className="menuspace">
+                                <div className='menu' onClick={() => {
+                                        SetMenuOpen(!menuOpen);
+                                    }}>
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+                                </div>
+                            </div>
+
+                            <div className="menuspace">
+                                <NavLink to="/"><img className="logo" src="https://www.udemy.com/staticx/udemy/images/v7/logo-udemy.svg" alt="LogoImg" /></NavLink>
+                            </div>
+                        
+                            <div className="menuspace">
+                                    <div className="serchbar1">
+                                        
+                                        <button className="searchiconBtn" onClick={handleSearch}><IoSearchSharp className="searchicon" /></button>
+                                    <div className="login">
+                                        {localStorage.getItem("token") ? (            
+                                            <button className="cartbtn"><NavLink to="/Cart"><img className="cartimg" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWBCXqF1rdOYnyCZjSGCFQXGOVCKLMcgnQyRYdvHeU4XkdGnhJ" alt="CartImg" /></NavLink>{totalItems}</button>
+                                        ): (    
+                                            <button className="cartbtn"><NavLink to="/login"><img className="cartimg" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWBCXqF1rdOYnyCZjSGCFQXGOVCKLMcgnQyRYdvHeU4XkdGnhJ" alt="CartImg" /></NavLink>{totalItems}</button>
+                                        )}
+                                    </div>
+                                    </div>
+
+                            </div>
+                    </div> 
             </div>
         </>
     )

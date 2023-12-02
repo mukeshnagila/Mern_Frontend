@@ -268,3 +268,127 @@
 .byaddcart{
     z-index: 1000;
 }
+
+
+@media only screen and (min-width:800px) and (max-width:8000px) {
+    
+    .ifnotlogin{
+        display: none;
+    }
+
+}
+
+
+
+/* ////////////////////////////////////// Media Quary for mobile //////////////////////////////////// */
+
+
+
+@media only screen and (min-width:200px) and (max-width:800px) {
+
+    .Nav2nd{
+        display: none;
+    }
+
+    .Communication_H1{
+        font-size: x-large;
+        font-family: auto;
+    }
+
+    .Communication_H2{
+        font-size: 18px;
+        font-family: auto;
+    }
+
+    .ASchild1{
+        display: block;
+    }
+
+    .ASmini{
+        width: 100%;
+        padding-bottom: 20px;
+    }
+
+    .mostpopcontent{
+        justify-content: space-evenly;
+    }
+
+    .popular_topic{
+        justify-content: space-evenly;
+    }
+
+    .popular_topic_Btn{
+        width: 160px;
+    }
+
+    .popular_Ins_item{
+        justify-content: space-evenly;
+    }
+
+    .Ins_item_1{
+        width: 100%;
+    }
+
+    .fornotsure{
+        font-size: 9px;
+    }
+
+    .fornotsureImg{
+        width: 25px;
+        height: 25px;
+    }
+
+    .forBLast{
+        display: block;
+    }
+
+    .Bfor_rating{
+        display: none;
+    }
+
+    .forBLast_content{
+        width: 100%;
+    }
+
+    .forBLast_content_item1_Img{
+        height: 100px;
+    }
+
+    .forBLast_content_item2{
+        width: 80%;
+    }
+
+    .forBLast_content_item2 h3{
+        font-size: small;
+    }
+
+    .forBLast_content_item2 p{
+        font-size: x-small;
+    }
+
+    .forlastcolor{
+        font-size: 10px;
+    }
+
+    .LastBforstart{
+        font-size: x-small;
+    }
+
+    .forBLast_content_item3{
+        width: 20%;
+    }
+
+    .Startmostpop_item{
+        width: 100%;
+        padding-bottom: 5%;
+    }
+
+    .forBrtag{
+        display: none;
+    }
+
+    .iflogin{
+        display: none;
+    }
+
+}    

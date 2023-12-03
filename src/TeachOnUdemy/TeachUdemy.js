@@ -32,7 +32,7 @@ function TeachUdemy() {
 
     return(
         <>
-            <div className="Techudemy">
+            <div className="Techudemy fordisk">
                     <div className="TuContainer1">
                             <div className="TuContainer1_item1">
                                     <h1 className="TuContainer1_item1_H1">Come teach with us</h1><br/>
@@ -40,6 +40,18 @@ function TeachUdemy() {
                                     <button className="get_start_btn">Get started</button>
                             </div>
                     </div>
+            </div><br/>
+
+            <div className="Techudemy formob">
+                    <div className="formob">
+                        <img className="formobimg" src="https://s.udemycdn.com/teaching/billboard-mobile-v3.jpg" alt="formobimg" />
+                    </div>
+                  
+                    <div className="formob_item1">
+                        <h1>Come teach with us</h1><br/>
+                        <p>Become an instructor and change lives — including your own</p><br/>
+                        <button className="get_start_btn">Get started</button>
+                   </div>
             </div><br/>
 
             <div className="TuContainer1_item2">

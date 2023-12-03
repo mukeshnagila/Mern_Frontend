@@ -214,3 +214,148 @@
     background-color: #2d2f31;
     cursor: pointer;
 }
+
+.formob{
+    display: none;
+}
+
+
+
+/* //////////////////////////////////// For mobile view ////////////////////////////////////// */
+
+@media only screen and (min-width:200px) and (max-width:850px) {
+ 
+    .formob{
+        display: block;
+    }
+    
+    .fordisk{
+        display: none;
+    }
+
+    .formob{
+        width: auto;
+        height: auto;
+    }
+
+    .formobimg{
+        width: 100%;
+    }
+
+    .formob_item1{
+        margin-top: 5%;
+    }
+
+    .formob_item1 h1{
+        font-size: x-larger;
+    }
+
+    .TuContainer1_item2_h1 {
+        font-size: 25px;
+    }
+    
+    .TuContainer1_item2_part1 {
+        display: block;
+    }
+
+    .TuContainer1_item2_part1_1 {
+        margin-bottom: 5%;
+    }
+
+    .HowToBeing_route_h2 {
+        font-size: small;
+    }
+
+    .HowToBeing {
+        padding: 0% 2%;
+    }
+
+    .HowToBeing_content {
+        display: block;
+    }
+
+    .peopleReview {
+        display: block;
+    }
+
+    .peopleReview_img {
+        text-align: center;
+    }
+
+    .HowToBeing_content1_p2 {
+        font-size: inherit;
+    }
+
+    .peopleReview {
+        padding: 0% 2%;
+    }
+
+    .HowToBeing_content11 img{
+        width: 100%;
+    }
+
+    .foralone{
+        display: block;
+    }
+
+    .foralone1 img{
+        width: 100%;
+    }
+
+    .lasttechme{
+        padding: 2%;
+    }
+
+    .lasttechme_h{
+        line-height: 50px;
+    }
+
+}
+
+
+
+
+/* //////////////////////////////////// For Tablate view ////////////////////////////////////// */
+
+@media only screen and (min-width:850px) and (max-width:1250px) {
+    
+    .TuContainer1_item1_H1 {
+        font-size: 34px;
+    }
+
+    .HowToBeing {
+        padding: 0% 6%;
+    }
+
+    .peopleReview_img {
+        width: 50%;
+    }
+
+    .peopleReview_img img {
+        width: 100%;
+    }
+
+    .peopleReview_content{
+        width: 50%;
+    }
+    
+    .peopleReview {
+        padding: 0% 2%;
+    }
+
+    .foralone{
+        display: block;
+    }
+
+    .foralone1{
+        text-align: center;
+    }
+
+    .foralone img{
+        width: 90%;
+    }
+
+    .lasttechme {
+        padding: 5% 13%;
+    }
+}

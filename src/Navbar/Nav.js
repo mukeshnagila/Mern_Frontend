@@ -341,6 +341,12 @@ function Nav(){
                                                     <p>{userData && userData.email ? userData.email : "User Email"}</p>
                                                 </div>
                                         </div><hr/><br/>
+
+                                        <div className="aftermedia">
+                                                <button className="teachon dropdown"><NavLink to="/TeachUdemy" className="teachon aftermediainput">Teach On Udemy</NavLink></button><br/>
+                                                <button className="teachon dropdown"><NavLink to="/Mylearning" className="teachon aftermediainput">My Learning</NavLink></button>
+                                        </div><br/><hr/><br/>
+
                                         <button className="signupbtn btn" onClick={handelLogout}>LogOut</button>
                                         <br/><br/>
                                     </div>

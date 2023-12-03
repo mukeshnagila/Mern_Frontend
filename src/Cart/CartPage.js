@@ -183,7 +183,7 @@ function CartPage() {
     return(
         <>
             <div className="Communication">
-                <h1>Shopping Cart</h1>
+                <h1 className="Communication_cart_h1">Shopping Cart</h1>
 
             <div className="scartstart">
                 <p className="scartstart_p">{cartItems.length} Courses in Cart</p>

@@ -522,7 +522,7 @@
 
 /* /////////////////////////////////// Media Quary For Phone ///////////////////////////////// */
 
-@media only screen and (min-width:200px) and (max-width:800px) {
+@media only screen and (min-width:200px) and (max-width:850px) {
     
     .Banner{
         display: none;
@@ -679,6 +679,78 @@
     .Top_cat_H4_Btn:hover{
         background-color: black;
         color: #fff;
+    }
+
+}
+
+
+
+
+/* ////////////////////////////////////////////////// For TabView ////////////////////////////////////////// */
+
+@media only screen and (min-width:850px) and (max-width:1250px) {
+
+    .Banner{
+        width: 18rem;
+        left: 3.8rem;
+        top: 5.8rem;
+    }
+
+    .Banner h1{
+        font-size: larger
+    }
+
+    .B_section_btn{
+        grid-gap: 0.6rem;
+    }
+
+    .subInfo{
+        width: 300px;
+        margin-bottom: 5%;
+    }
+
+    .goals_items{
+        flex-wrap: wrap;
+    }
+
+    .Gitem_1{
+        margin-bottom: 5%;
+        width: 330px;
+    }
+
+    .learners_A{
+        flex-wrap: wrap;
+    }
+
+    .Top_cat1{
+        height: auto;
+    }
+
+    .Udemy_business{
+        flex-direction: column-reverse;
+    }
+
+    .UB1{
+        margin-top: 5%;
+        padding-right: 0%;
+    }
+
+    .UB1_image{
+        width: 26vw;
+        padding-left: 30%;
+    }
+
+    .UB1_H3{
+        font-size: 1.2rem;
+        text-align: center;
+    }
+
+    .Udemy_Business_btn{
+        width: 45%;
+    }
+
+    .Lern_more{
+        width: 50%;
     }
 
 }

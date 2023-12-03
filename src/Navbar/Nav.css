@@ -307,10 +307,18 @@
     display: none;
   }
 
+  .aftermedia{
+    line-height: 25px;
+  }
+  .aftermediainput{
+    text-decoration: none;
+    color: #2d2f31;
+  }
+
 
 /* ///////////////////////////// Media Quairy for Mobile ///////////////////////////////// */
 
-  @media only screen and (min-width:200px) and (max-width:800px) {
+  @media only screen and (min-width:200px) and (max-width:850px) {
       .nav{
         display: none;
       }
@@ -334,148 +342,176 @@
         width: 2.25rem;
         height: 1.8rem;
         cursor: pointer;
-    }
+      }
 
-    .menu span {
-            height: 0.4rem;
-            width: 100%;
-            background-color: #2d2f31;
-            border-radius: 0.2rem;
-    }
-    .links{
-      flex-direction: column;
-      text-align: center;
-      width: 100%;
-      margin: 0.2rem 0.5rem;
-      padding: 0%;
-      line-height: 23px;
-  }
+      .menu span {
+              height: 0.4rem;
+              width: 100%;
+              background-color: #2d2f31;
+              border-radius: 0.2rem;
+      }
 
-  .clickon:hover{
-      background-color: #a2b5f2;
-  }
+        .links{
+          flex-direction: column;
+          text-align: center;
+          width: 100%;
+          margin: 0.2rem 0.5rem;
+          padding: 0%;
+          line-height: 23px;
+      }
 
-  #close{
-      display: none;
-  }
+      .clickon:hover{
+          background-color: #a2b5f2;
+      }
 
-  #close.open{
-      display: flex;
-      position: absolute;
-      /* background-color: #fff; */
-      z-index: 1000;
-      width: 80%;
-      left: 0%;
-      top: 0%;
-  }
+      #close{
+          display: none;
+      }
 
-    .navmobile_start{
-      display: flex;
-      justify-content: space-evenly;
-      align-items: center;
-    }
+      #close.open{
+          display: flex;
+          position: absolute;
+          /* background-color: #fff; */
+          z-index: 1000;
+          width: 80%;
+          left: 0%;
+          top: 0%;
+      }
 
-    .menuspace{
-        width: 30%;
-    }
+      .navmobile_start{
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+      }
 
-    .login > * {
-        margin-right: 0%;
-    }
+      .menuspace{
+          width: 30%;
+      }
 
-    .login{
-        margin-left: 5%;
-    }
+      .login > * {
+          margin-right: 0%;
+      }
 
-    .serchbar1{
+      .login{
+          margin-left: 5%;
+      }
+
+      .serchbar1{
+          padding-left: 0%;
+          margin-left: 0%;
+          justify-content: flex-end;
+      }
+
+      .searchicon {
+        width: 30px;
+        height: 30px;
+      }
+      
+      .menuspace{
         padding-left: 0%;
-        margin-left: 0%;
-        justify-content: flex-end;
-    }
+      }
 
-    .searchicon {
-      width: 30px;
-      height: 30px;
-    }
-    
-    .menuspace{
-      padding-left: 0%;
-    }
+      .cencelsign{
+        /* position: relative;
+        left: 15%; */
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        margin-top: 2%;
+      }
 
-    .cencelsign{
-      /* position: relative;
-      left: 15%; */
-      width: 50px;
-      height: 50px;
-      border-radius: 50%;
-      margin-top: 2%;
-    }
+      .cencelsign2{
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        cursor: pointer;
+      }
 
-    .cencelsign2{
-      width: 30px;
-      height: 30px;
-      border-radius: 50%;
-      cursor: pointer;
-    }
+      .Navhover1{
+          width: 100%;
+      }
+      
+      .Navhover2{
+        display: flex;
+      }
 
-    .Navhover1{
+          /* Add these styles to your existing CSS */
+      .dropdowncat {
+        display: none;
+        position: absolute;
+        top: 100%; /* Position it just below the button */
+        left: 0;
+        background-color: #fff;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08), 0 4px 12px rgba(0, 0, 0, 0.08);
+        z-index: 1;
+      }
+
+      /* .Navhover1:hover .dropdowncat {
+        display: block;
+      } */
+
+      .dropdowncat button {
         width: 100%;
-    }
-    
-    .Navhover2{
-      display: flex;
-    }
+        padding: 10px;
+        text-align: left;
+        border: none;
+        background: none;
+        cursor: pointer;
+      }
 
-        /* Add these styles to your existing CSS */
-    .dropdowncat {
-      display: none;
-      position: absolute;
-      top: 100%; /* Position it just below the button */
-      left: 0;
-      background-color: #fff;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08), 0 4px 12px rgba(0, 0, 0, 0.08);
-      z-index: 1;
-    }
+      .dropdowncat button:hover {
+        background-color: #a2b5f2;
+      }
 
-    /* .Navhover1:hover .dropdowncat {
-      display: block;
-    } */
+      .dropcat{
+        color: black;
+        font-weight: 700;
+      }
 
-    .dropdowncat button {
-      width: 100%;
-      padding: 10px;
-      text-align: left;
-      border: none;
-      background: none;
-      cursor: pointer;
-    }
+      .lionhover12{
+        text-decoration: none;
+        color: #2d2f31;
+      }
+      .lionhover12:hover{
+        color: blueviolet;
+      }
 
-    .dropdowncat button:hover {
-      background-color: #a2b5f2;
-    }
+      .open88{
+        line-height: 18px;
+        margin-top: 2%;
+      }
 
-    .dropcat{
-      color: black;
-      font-weight: 700;
-    }
-
-    .lionhover12{
-      text-decoration: none;
-      color: #2d2f31;
-    }
-    .lionhover12:hover{
-      color: blueviolet;
-    }
-
-    .open88{
-      line-height: 18px;
-      margin-top: 2%;
-    }
-
-    .textalign{
-      text-align: start;
-      padding-left: 10%;
-      margin-bottom: 3%;
-    }
+      .textalign{
+        text-align: start;
+        padding-left: 10%;
+        margin-bottom: 3%;
+      }
 
 } 
+
+
+
+
+/* //////////////////////////////////// Media Quary for Tablate //////////////////////////////// */
+
+
+@media only screen and (min-width:850px) and (max-width:1250px) {
+ 
+    
+      .logo{
+          margin-left: 0%;
+      }
+
+      .serchbar{
+          width: 68%;
+      }
+
+      .mylearning{
+          display: none;
+      }
+
+      .login > * {
+          margin-right: 5px;
+      }
+
+}

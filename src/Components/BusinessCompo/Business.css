@@ -270,7 +270,7 @@
 }
 
 
-@media only screen and (min-width:800px) and (max-width:8000px) {
+@media only screen and (min-width:850px) and (max-width:8000px) {
     
     .ifnotlogin{
         display: none;
@@ -284,7 +284,7 @@
 
 
 
-@media only screen and (min-width:200px) and (max-width:800px) {
+@media only screen and (min-width:200px) and (max-width:850px) {
 
     .Nav2nd{
         display: none;
@@ -391,4 +391,59 @@
         display: none;
     }
 
-}    
+} 
+
+
+
+
+/* ////////////////////////////////////// Media Quary for Tablate //////////////////////////////////// */
+
+
+
+@media only screen and (min-width:850px) and (max-width:1250px) {
+
+    .mostpopcontent {
+        justify-content: space-evenly;
+    }
+
+    .Startmostpop_item {
+        width: 30%;
+        margin-bottom: 3%;
+    }
+    
+    .ASmini_H2 {
+        padding-left: 1%;
+        font-size: 12px;
+    }
+
+    .ASmini_img {
+        width: 30px;
+        height: 30px;
+    }
+
+    .popular_topic_Btn {
+        width: 200px;
+    }
+
+    .popular_topic {
+        justify-content: space-evenly;
+    }
+
+    .popular_Ins_item{
+        justify-content: space-evenly;
+    }
+
+    .Ins_item_1 {
+        width: 300px;
+    }
+
+    .Bfor_rating{
+        display: none;
+    }
+
+    .forBLast_content{
+        width: 100%;
+    }
+
+}
+

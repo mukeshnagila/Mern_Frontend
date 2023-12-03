@@ -89,7 +89,7 @@
 /* //////////////////////////////////// Media Quary for Mobile //////////////////////////////// */
 
 
-@media only screen and (min-width:200px) and (max-width:800px) {
+@media only screen and (min-width:200px) and (max-width:850px) {
  
     .footercontent{
         flex-direction: column-reverse;
@@ -123,6 +123,46 @@
         width: 95%;
         float: left;
         padding-left: 3%;
+    }
+
+}
+
+
+
+
+/* //////////////////////////////////// Media Quary for Tablate //////////////////////////////// */
+
+
+@media only screen and (min-width:850px) and (max-width:1250px) {
+ 
+    .forlastsection{
+        display: block;
+    }
+
+    .forlastsectionA img{
+        width: 100%;
+    }
+
+    .forlastsectionB{
+        text-align: center;
+    }
+
+    .Fbox1{
+        width: 80%;
+        justify-content: space-around;
+    }
+
+    .Fbox2{
+        width: 15%;
+    }
+
+    .LFooter1{
+        width: 75%;
+    }
+
+    .LFooter2{
+        width: auto;
+        padding-top: 2%;
     }
 
 }

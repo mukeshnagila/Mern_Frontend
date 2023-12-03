@@ -617,7 +617,7 @@ function Nav(){
 
                                     </div>
                                     <div className="cencelsign">
-                                        <button onClick={() => {SetMenuOpen(!menuOpen)}}><img className="cencelsign2" src="https://cdn-icons-png.flaticon.com/512/262/262037.png" /></button>
+                                        <button onClick={() => {SetMenuOpen(!menuOpen)}}><img className="cencelsign2" src="https://cdn-icons-png.flaticon.com/512/262/262037.png" alt="cancelimg" /></button>
                                     </div>
                                 </div>
                             </div>

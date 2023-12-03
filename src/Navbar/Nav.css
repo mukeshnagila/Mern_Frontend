@@ -343,6 +343,14 @@
         height: 1.8rem;
         cursor: pointer;
       }
+      .menu2{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 2.25rem;
+        height: 1.8rem;
+        cursor: pointer;
+      }
 
       .menu span {
               height: 0.4rem;
@@ -367,6 +375,9 @@
       #close{
           display: none;
       }
+      #close2{
+        display: none;
+      }
 
       #close.open{
           display: flex;
@@ -376,6 +387,19 @@
           width: 80%;
           left: 0%;
           top: 0%;
+      }
+      #close2.open2 {
+        display: flex;
+        position: absolute;
+        background-color: #fff;
+        z-index: 1000;
+        width: auto;
+        left: 0%;
+        top: 0%;
+        /* height: 45px; */
+        padding-top: 5%;
+        padding-bottom: 15%;
+        padding-left: 2%;
       }
 
       .navmobile_start{
@@ -485,6 +509,11 @@
         text-align: start;
         padding-left: 10%;
         margin-bottom: 3%;
+      }
+
+      .classbtn55{
+        background-color: #fff;
+        border: none;
       }
 
 } 

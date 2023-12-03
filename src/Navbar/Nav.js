@@ -13,6 +13,7 @@ function Nav(){
     const [isTecDropdownVisible, setTecDropdownVisible] = useState(false);
     const [IsProfilevisible, SetProfileVisible] = useState(false);
     const [menuOpen, SetMenuOpen] = useState(false);
+    const [menuOpen2, SetMenuOpen2] = useState(false);
     const [isDropdownOpen, setDropdownOpen] = useState(false);  
     const [isDropdownOpen2, setDropdownOpen2] = useState(false);  
     const [isDropdownOpen3, setDropdownOpen3] = useState(false);  
@@ -84,7 +85,7 @@ function Nav(){
         setSearchItem(e.target.value);
     }
     const handleSearch = async () => {
-
+        SetMenuOpen2(false);
         if (!searchItem.trim()) {
             alert('Please fill in the search field first.');
             return;
@@ -376,6 +377,7 @@ function Nav(){
                                 </div>
 
                                 <div id="close" className={menuOpen ? "open" : ""}>
+
                                     <div className='links'>
                                             
                                     {tokenforAuth || userData ?
@@ -622,8 +624,9 @@ function Nav(){
                                         }   
 
                                     </div>
+                                    
                                     <div className="cencelsign">
-                                        <button onClick={() => {SetMenuOpen(!menuOpen)}}><img className="cencelsign2" src="https://cdn-icons-png.flaticon.com/512/262/262037.png" alt="cancelimg" /></button>
+                                        <button className="classbtn55" onClick={() => {SetMenuOpen(!menuOpen)}}><img className="cencelsign2" src="https://cdn-icons-png.flaticon.com/512/262/262037.png" alt="cancelimg" /></button>
                                     </div>
                                 </div>
                             </div>
@@ -633,9 +636,21 @@ function Nav(){
                             </div>
                         
                             <div className="menuspace">
-                                    <div className="serchbar1">
+                                <div className="serchbar1">
                                         
-                                        <button className="searchiconBtn" onClick={handleSearch}><IoSearchSharp className="searchicon" /></button>
+                                        <button className="searchiconBtn menu2" onClick={() => {
+                                            SetMenuOpen2(!menuOpen2);
+                                        }}><IoSearchSharp className="searchicon" /></button>
+
+                                        <div id="close2" className={menuOpen2 ? "open2" : ""}>
+                                                <input className="serchbar" style={{ fontSize: "16px" }} value={searchItem}  onChange={handleInput} placeholder="Search for anything"/><button className="searchiconBtn" onClick={handleSearch}><img className="searchicon" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxEh_35CCxsTtQsJ3yZCojZHqWBq2ny9sBhP0Mq_AfITKrCogKgSHYftY-giG-rBhHYjc&usqp=CAU" alt="searchimg" /></button>
+                                                <div className="cencelsign">
+                                                    <button className="classbtn55" onClick={() => {SetMenuOpen2(!menuOpen2)}}><img className="cencelsign2" src="https://cdn-icons-png.flaticon.com/512/262/262037.png" alt="cancelimg" /></button>
+                                                </div><br/>
+                                        </div>
+
+
+
                                     <div className="login">
                                         {localStorage.getItem("token") ? (            
                                             <button className="cartbtn"><NavLink to="/Cart"><img className="cartimg" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWBCXqF1rdOYnyCZjSGCFQXGOVCKLMcgnQyRYdvHeU4XkdGnhJ" alt="CartImg" /></NavLink>{totalItems}</button>
@@ -645,7 +660,7 @@ function Nav(){
                                     </div>
                                     </div>
 
-                            </div>
+                                </div>
                     </div> 
             </div>
         </>

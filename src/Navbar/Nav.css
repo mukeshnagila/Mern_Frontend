@@ -317,7 +317,7 @@
 
       .navmobile{
         padding: 1% 1%;
-        background-color: #fff;
+        /* background-color: #fff; */
         display: block;
         /* height: 100px; */
         align-items: center;
@@ -342,6 +342,32 @@
             background-color: #2d2f31;
             border-radius: 0.2rem;
     }
+    .links{
+      flex-direction: column;
+      text-align: center;
+      width: 100%;
+      margin: 0.2rem 0.5rem;
+      padding: 0%;
+      line-height: 23px;
+  }
+
+  .clickon:hover{
+      background-color: #a2b5f2;
+  }
+
+  #close{
+      display: none;
+  }
+
+  #close.open{
+      display: flex;
+      position: absolute;
+      /* background-color: #fff; */
+      z-index: 1000;
+      width: 80%;
+      left: 0%;
+      top: 0%;
+  }
 
     .navmobile_start{
       display: flex;
@@ -375,4 +401,81 @@
     .menuspace{
       padding-left: 0%;
     }
+
+    .cencelsign{
+      /* position: relative;
+      left: 15%; */
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      margin-top: 2%;
+    }
+
+    .cencelsign2{
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      cursor: pointer;
+    }
+
+    .Navhover1{
+        width: 100%;
+    }
+    
+    .Navhover2{
+      display: flex;
+    }
+
+        /* Add these styles to your existing CSS */
+    .dropdowncat {
+      display: none;
+      position: absolute;
+      top: 100%; /* Position it just below the button */
+      left: 0;
+      background-color: #fff;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08), 0 4px 12px rgba(0, 0, 0, 0.08);
+      z-index: 1;
+    }
+
+    /* .Navhover1:hover .dropdowncat {
+      display: block;
+    } */
+
+    .dropdowncat button {
+      width: 100%;
+      padding: 10px;
+      text-align: left;
+      border: none;
+      background: none;
+      cursor: pointer;
+    }
+
+    .dropdowncat button:hover {
+      background-color: #a2b5f2;
+    }
+
+    .dropcat{
+      color: black;
+      font-weight: 700;
+    }
+
+    .lionhover12{
+      text-decoration: none;
+      color: #2d2f31;
+    }
+    .lionhover12:hover{
+      color: blueviolet;
+    }
+
+    .open88{
+      line-height: 18px;
+      margin-top: 2%;
+    }
+
+    .textalign{
+      text-align: start;
+      padding-left: 10%;
+      margin-bottom: 3%;
+    }
+
 } 

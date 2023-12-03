@@ -28,6 +28,49 @@ import OperatingSystem from "../Components/IT_Software/Operating_System";
 import OtherITSoftware from "../Components/IT_Software/Other_ITSoftware";
 import TeachUdemy from "../TeachOnUdemy/TeachUdemy";
 import ITSoftware from "../MainComponent/IT_Software";
+import Design from "../MainComponent/Design";
+import Marketing from "../MainComponent/Marketing";
+import LifeStyle from "../MainComponent/LifeStyle";
+import Photography from "../MainComponent/Photography";
+import Music from "../MainComponent/Music";
+import Health from "../MainComponent/Health";
+import Academic from "../MainComponent/Academic";
+import WebD from "../Components/Desine/WebD";
+import GameD from "../Components/Desine/GameD";
+import AnimationD from "../Components/Desine/AnimationD";
+import FashionD from "../Components/Desine/FashionD";
+import OtherD from "../Components/Desine/OtherD";
+import DigitalM from "../Components/Marketing/DigitalM";
+import MediaM from "../Components/Marketing/MediaM";
+import PublicM from "../Components/Marketing/PublicM";
+import ContectM from "../Components/Marketing/ContentM";
+import ProductM from "../Components/Marketing/ProductM";
+import ArtsS from "../Components/Life_Style/ArtsS";
+import BeautyS from "../Components/Life_Style/BeautyS";
+import FoodS from "../Components/Life_Style/FoodS";
+import PetS from "../Components/Life_Style/PetS";
+import TravelS from "../Components/Life_Style/TravelS";
+import DigitalP from "../Components/Photography/DigitalP";
+import PhotoP from "../Components/Photography/PhotoP";
+import VideoP from "../Components/Photography/VideoP";
+import CommercialP from "../Components/Photography/CommercialP";
+import PtoolP from "../Components/Photography/PtoolP";
+import Instrument from "../Components/Music/InstrumentA";
+import MusicA from "../Components/Music/MusicA";
+import VocalA from "../Components/Music/VocalA";
+import Msoftware from "../Components/Music/Msoftware";
+import Mtecn from "../Components/Music/Mtecn";
+import FitnessH from "../Components/Health/FitnessH";
+import SportH from "../Components/Health/SportH";
+import YogaH from "../Components/Health/YogaH";
+import MHealthH from "../Components/Health/MHealthH";
+import DanceH from "../Components/Health/DanceH";
+import Engineering from "../Components/Academic/Engineering";
+import TraningT from "../Components/Academic/TraningT";
+import SScienceT from "../Components/Academic/SScienceT";
+import ScienceT from "../Components/Academic/ScienceT";
+import MathsT from "../Components/Academic/MathsT";
+import PageNotFound from "../Components/PageNotFound";
 
 function RouteingFile(){
     return(
@@ -61,6 +104,61 @@ function RouteingFile(){
                             <Route path="/IT_Software/Other_ITSoftware" element={<OtherITSoftware />} />
 
 
+                            <Route path="/Design" element={<Design />} />
+                            <Route path="/Desine/web_D" element={<WebD />} />
+                            <Route path="/Desine/game_D" element={<GameD />} />
+                            <Route path="/Desine/animation_D" element={<AnimationD />} />
+                            <Route path="/Desine/fashion_D" element={<FashionD />} />
+                            <Route path="/Desine/other_D" element={<OtherD />} />
+
+
+                            <Route path="/Marketing" element={<Marketing />} />
+                            <Route path="/Marketing/Digital_M" element={<DigitalM />} />
+                            <Route path="/Marketing/Media_M" element={<MediaM />} />
+                            <Route path="/Marketing/Public_M" element={<PublicM />} />
+                            <Route path="/Marketing/Content_M" element={<ContectM />} />
+                            <Route path="/Marketing/Product_M" element={<ProductM />} />
+
+
+                            <Route path="/LifeStyle" element={<LifeStyle />} />
+                            <Route path="/LifeStyle/Arts_S" element={<ArtsS />} />
+                            <Route path="/LifeStyle/Beauty_S" element={<BeautyS />} />
+                            <Route path="/LifeStyle/Food_S" element={<FoodS />} />
+                            <Route path="/LifeStyle/Pet_S" element={<PetS />} />
+                            <Route path="/LifeStyle/Travel_S" element={<TravelS />} />
+
+
+                            <Route path="/Photography" element={<Photography />} />
+                            <Route path="/Photography/Digital_p" element={<DigitalP />} />
+                            <Route path="/Photography/Photo_p" element={<PhotoP />} />
+                            <Route path="/Photography/Video_p" element={<VideoP />} />
+                            <Route path="/Photography/Commercial_p" element={<CommercialP />} />
+                            <Route path="/Photography/Ptool_p" element={<PtoolP />} />
+
+
+                            <Route path="/Music" element={<Music />} />
+                            <Route path="/Music/Instruments_m" element={<Instrument />} />
+                            <Route path="/Music/Music_m" element={<MusicA />} />
+                            <Route path="/Music/Vocal_m" element={<VocalA />} />
+                            <Route path="/Music/Msoftware_m" element={<Msoftware />} />
+                            <Route path="/Music/Mtechniqe_m" element={<Mtecn />} />
+
+
+                            <Route path="/Health" element={<Health />} />
+                            <Route path="/Health/Fitness_h" element={<FitnessH />} />
+                            <Route path="/Health/Sport_h" element={<SportH />} />
+                            <Route path="/Health/Yoga_h" element={<YogaH />} />
+                            <Route path="/Health/Mhealth_h" element={<MHealthH />} />
+                            <Route path="/Health/Dance_h" element={<DanceH />} />
+
+
+                            <Route path="/Academic" element={<Academic />} />
+                            <Route path="/Academic/Engineering_T" element={<Engineering />} />
+                            <Route path="/Academic/Math_T" element={<MathsT />} />
+                            <Route path="/Academic/Science_T" element={<ScienceT />} />
+                            <Route path="/Academic/SScience_T" element={<SScienceT />} />
+                            <Route path="/Academic/Training_T" element={<TraningT />} />
+
 
 
                             <Route path="/login" element={<LoginPage />} />
@@ -69,6 +167,7 @@ function RouteingFile(){
                             <Route path="/Mylearning" element={<MyLearning />} />
                             <Route path="/SearchItem" element={<SearchProduct />} />
                             <Route path="/TeachUdemy" element={<TeachUdemy />} />
+                            <Route path="*" element={<PageNotFound />} />
 
                     </Routes>
             </DataStore>    

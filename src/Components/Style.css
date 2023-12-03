@@ -508,6 +508,15 @@
     cursor: pointer;
 }
 
+.pagenotfound{
+    padding: 2% 7%;
+    width: 80%;
+}
+
+.pagenotfound_img{
+    width: 100%;
+    height: 500px;
+}
 
 
 

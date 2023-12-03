@@ -167,112 +167,112 @@ function Nav(){
                                                 </div>
                                             </li>
 
-                                            <li className="lionhover">Design
+                                            <li className="lionhover"><NavLink to="/Design">Design</NavLink>
                                                 <div className="business-dropdown">
                                                     <div className="start-2nddropdown">
                                                         <div className="dropdown-content">
                                                             <ul>
-                                                                <li className="lionhover">Web Design</li>
-                                                                <li className="lionhover">Game Design</li>
-                                                                <li className="lionhover">3D & Animation</li>
-                                                                <li className="lionhover">Fashion Design </li>
-                                                                <li className="lionhover">Other Design</li>
+                                                                <li className="lionhover"><NavLink to="/Desine/web_D">Web Design</NavLink></li>
+                                                                <li className="lionhover"><NavLink to="/Desine/game_D">Game Design</NavLink></li>
+                                                                <li className="lionhover"><NavLink to="/Desine/animation_D">3D & Animation</NavLink></li>
+                                                                <li className="lionhover"><NavLink to="/Desine/fashion_D">Fashion Design</NavLink></li>
+                                                                <li className="lionhover"><NavLink to="/Desine/other_D">Other Design</NavLink></li>
                                                             </ul>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </li>
 
-                                            <li className="lionhover">Marketing
+                                            <li className="lionhover"><NavLink to="/Marketing">Marketing</NavLink>
                                                 <div className="business-dropdown">
                                                     <div className="start-2nddropdown">
                                                         <div className="dropdown-content">
                                                             <ul>
-                                                                <li className="lionhover">Digital Marketing</li>
-                                                                <li className="lionhover">Social Media Marketing</li>
-                                                                <li className="lionhover">Public Relationship</li>
-                                                                <li className="lionhover">Content Marketing</li>
-                                                                <li className="lionhover">Product Marketing</li>
+                                                                <li className="lionhover"><NavLink to="/Marketing/Digital_M">Digital Marketing</NavLink></li>
+                                                                <li className="lionhover"><NavLink to="/Marketing/Media_M">Social Media Marketing</NavLink></li>
+                                                                <li className="lionhover"><NavLink to="/Marketing/Public_M">Public Relationship</NavLink></li>
+                                                                <li className="lionhover"><NavLink to="/Marketing/Content_M">Content Marketing</NavLink></li>
+                                                                <li className="lionhover"><NavLink to="/Marketing/Product_M">Product Marketing</NavLink></li>
                                                             </ul>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </li>
 
-                                            <li className="lionhover">Life Style
+                                            <li className="lionhover"><NavLink to="/LifeStyle">Life Style</NavLink>
                                                 <div className="business-dropdown">
                                                     <div className="start-2nddropdown">
                                                         <div className="dropdown-content">
                                                             <ul>
-                                                                <li className="lionhover">Arts & Crafts</li>
-                                                                <li className="lionhover">Beauty & Makeup</li>
-                                                                <li className="lionhover">Food & Beverage</li>
-                                                                <li className="lionhover">Pet Care & Training</li>
-                                                                <li className="lionhover">Travel</li>
+                                                                <li className="lionhover"><NavLink to="/LifeStyle/Arts_S">Arts & Crafts</NavLink></li>
+                                                                <li className="lionhover"><NavLink to="/LifeStyle/Beauty_S">Beauty & Makeup</NavLink></li>
+                                                                <li className="lionhover"><NavLink to="/LifeStyle/Food_S">Food & Beverage</NavLink></li>
+                                                                <li className="lionhover"><NavLink to="/LifeStyle/Pet_S">Pet Care & Training</NavLink></li>
+                                                                <li className="lionhover"><NavLink to="/LifeStyle/Travel_S">Travel</NavLink></li>
                                                             </ul>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </li>
 
-                                            <li className="lionhover">Photography & Video
+                                            <li className="lionhover"><NavLink to="/Photography">Photography & Video</NavLink>
                                                 <div className="business-dropdown">
                                                     <div className="start-2nddropdown">
                                                         <div className="dropdown-content">
                                                             <ul>
-                                                                <li className="lionhover">Digital Photography</li>
-                                                                <li className="lionhover">Photography</li>
-                                                                <li className="lionhover">Video Design</li>
-                                                                <li className="lionhover">Commercial Photography</li>
-                                                                <li className="lionhover">Photography Tools</li>
+                                                                <li className="lionhover"><NavLink to="/Photography/Digital_p">Digital Photography</NavLink></li>
+                                                                <li className="lionhover"><NavLink to="/Photography/Photo_p">Photography</NavLink></li>
+                                                                <li className="lionhover"><NavLink to="/Photography/Video_p">Video Design</NavLink></li>
+                                                                <li className="lionhover"><NavLink to="/Photography/Commercial_p">Commercial Photography</NavLink></li>
+                                                                <li className="lionhover"><NavLink to="/Photography/Ptool_p">Photography Tools</NavLink></li>
                                                             </ul>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </li>
 
-                                            <li className="lionhover">Music & Arts
+                                            <li className="lionhover"><NavLink to="/Music">Music & Arts</NavLink>
                                                 <div className="business-dropdown">
                                                     <div className="start-2nddropdown">
                                                         <div className="dropdown-content">
                                                             <ul>
-                                                                <li className="lionhover">Instruments</li>
-                                                                <li className="lionhover">Music Production</li>
-                                                                <li className="lionhover">Vocal</li>
-                                                                <li className="lionhover">Music Software</li>
-                                                                <li className="lionhover">Music Techniques</li>
+                                                                <li className="lionhover"><NavLink to="/Music/Instruments_m">Instruments</NavLink></li>
+                                                                <li className="lionhover"><NavLink to="/Music/Music_m">Music Production</NavLink></li>
+                                                                <li className="lionhover"><NavLink to="/Music/Vocal_m">Vocal</NavLink></li>
+                                                                <li className="lionhover"><NavLink to="/Music/Msoftware_m">Music Software</NavLink></li>
+                                                                <li className="lionhover"><NavLink to="/Music/Mtechniqe_m">Music Techniques</NavLink></li>
                                                             </ul>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </li>
 
-                                            <li className="lionhover">Health & Fitness
+                                            <li className="lionhover"><NavLink to="/Health">Health & Fitness</NavLink>
                                                 <div className="business-dropdown">
                                                     <div className="start-2nddropdown">
                                                         <div className="dropdown-content">
                                                             <ul>
-                                                                <li className="lionhover">Fitness</li>
-                                                                <li className="lionhover">Sport</li>
-                                                                <li className="lionhover">Yoga</li>
-                                                                <li className="lionhover">Mental Health</li>
-                                                                <li className="lionhover">Dance</li>
+                                                                <li className="lionhover"><NavLink to="/Health/Fitness_h">Fitness</NavLink></li>
+                                                                <li className="lionhover"><NavLink to="/Health/Sport_h">Sport</NavLink></li>
+                                                                <li className="lionhover"><NavLink to="/Health/Yoga_h">Yoga</NavLink></li>
+                                                                <li className="lionhover"><NavLink to="/Health/Mhealth_h">Mental Health</NavLink></li>
+                                                                <li className="lionhover"><NavLink to="/Health/Dance_h">Dance</NavLink></li>
                                                             </ul>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </li>
 
-                                            <li className="lionhover">Teaching & Academic
+                                            <li className="lionhover"><NavLink to="/Academic">Teaching & Academic</NavLink>
                                                 <div className="business-dropdown">
                                                     <div className="start-2nddropdown">
                                                         <div className="dropdown-content">
                                                             <ul>
-                                                                <li className="lionhover">Engineering</li>
-                                                                <li className="lionhover">Math</li>
-                                                                <li className="lionhover">Science</li>
-                                                                <li className="lionhover">Social Science</li>
-                                                                <li className="lionhover">Teacher Training</li>
+                                                                <li className="lionhover"><NavLink to="/Academic/Engineering_T">Engineering</NavLink></li>
+                                                                <li className="lionhover"><NavLink to="/Academic/Math_T">Math</NavLink></li>
+                                                                <li className="lionhover"><NavLink to="/Academic/Science_T">Science</NavLink></li>
+                                                                <li className="lionhover"><NavLink to="/Academic/SScience_T">Social Science</NavLink></li>
+                                                                <li className="lionhover"><NavLink to="/Academic/Training_T">Teacher Training</NavLink></li>
                                                             </ul>
                                                         </div>
                                                     </div>

@@ -1,8 +1,23 @@
-import React from "react";
+import React, { useContext, useState } from "react";
 import "../Components/Style.css";
 import ImageSlider from "../Slider/Slider";
+import { store } from "../Store/Data";
+import AddCardBtn from "../Cart/AddToCart/BtnAddCart";
 
 function Home() {
+
+    const [Sdata] = useContext(store);
+
+    const [isHoverVisible, setIsHoverVisible] = useState(Array(Sdata.length).fill(false));
+
+    const handleHoverDropdownToggle = (index) => {
+        setIsHoverVisible((prevVisibility) => {
+            const updatedVisibility = [...prevVisibility];
+            updatedVisibility[index] = !updatedVisibility[index];
+            return updatedVisibility;
+        });
+    };
+
     return(
         <>
             <div className="iflogin">
@@ -62,10 +77,27 @@ function Home() {
                         <button className="ExplorePBtn">Explore Python</button><br/><br/>
 
                         <div className="courseInfo">
-                                <div className="subInfo">
-                                    <img className="subInfoimg" src="https://img-c.udemycdn.com/course/240x135/567828_67d0.jpg" alt="Homeimage" />
-                                    <h3 className="subInfoH3">The Complete Python Bootcamp From Zero to Hero in Python</h3>
-                                    <p className="subInfoP">Jose Potilla</p>
+                        {Sdata.filter((item) => item.category === "Marketing" && item.id % 3 === 0).map((item, index) => {
+                            return(<>
+                            
+                                <div className="subInfo sbinfoH dropdown" key={index} onMouseEnter={() => handleHoverDropdownToggle(index)} onMouseLeave={() => handleHoverDropdownToggle(index)}>
+                                                            {isHoverVisible[index] && (
+                                                                <div className="dropdown-myProfile byaddcart byhome">
+                                                                        <div className="Addcart1">
+                                                                                <h4>{item.name}</h4>
+                                                                                <div className="Addcartmini">
+                                                                                    <button className="bestsellerbtn">Bestseller</button>
+                                                                                    <p className="Addcartmini_update">Updated November 2023</p>
+                                                                                </div><br/>    
+                                                                                <p>{item.discr}</p>
+                                                                        </div>  
+                                                                        <hr/><br/>
+                                                                        <AddCardBtn product={item}/>
+                                                                    </div>
+                                                                )}
+                                    <img className="subInfoimg" src={item.image} alt="Homeimage" />
+                                    <h3 className="subInfoH3">{item.name}</h3>
+                                    <p className="subInfoP">{item.Wname}</p>
                                     <div className="subInfoRating">
                                     <div class="rating">
                                         <div class="star-container">
@@ -86,118 +118,11 @@ function Home() {
                                         </div><p className="rating_length">(486391)</p>
                                     </div>
 
-                                    <div> <span  className="subInforupee">₹499</span><span className="subInfooldmrp"> <del> ₹3099</del></span></div>
+                                    <div> <span  className="subInforupee">₹{item.price}</span><span className="subInfooldmrp"> <del> ₹{item.oldprice}</del></span></div>
                                 </div>
+                                </>)
+                            })}
 
-                                <div className="subInfo">
-                                    <img className="subInfoimg" src="https://img-c.udemycdn.com/course/240x135/543600_64d1_4.jpg" alt="Homeimage" />
-                                    <h3 className="subInfoH3">Automate the Boring Stuff with Python Programming</h3>
-                                    <p className="subInfoP">Jose Potilla</p>
-                                    <div className="subInfoRating">
-                                    <div class="rating">
-                                        <div class="star-container">
-                                            <div class="star half"></div>
-                                        </div>
-                                        <div class="star-container">
-                                            <div class="star"></div>
-                                        </div>
-                                        <div class="star-container">
-                                            <div class="star"></div>
-                                        </div>
-                                        <div class="star-container">
-                                            <div class="star"></div>
-                                        </div>
-                                        <div class="star-container">
-                                            <div class="star"></div>
-                                        </div>
-                                        </div><p className="rating_length">(486391)</p>
-                                    </div>
-
-                                    <div> <span  className="subInforupee">₹499</span><span className="subInfooldmrp"> <del> ₹3099</del></span></div>
-                                </div>
-
-                                <div className="subInfo">
-                                    <img className="subInfoimg" src="https://img-c.udemycdn.com/course/240x135/2776760_f176_10.jpg" alt="Homeimage" />
-                                    <h3 className="subInfoH3">100 Days of Code: The Complete Python Pro Bootcamp for 2023</h3>
-                                    <p className="subInfoP">Jose Potilla</p>
-                                    <div className="subInfoRating">
-                                    <div class="rating">
-                                        <div class="star-container">
-                                            <div class="star half"></div>
-                                        </div>
-                                        <div class="star-container">
-                                            <div class="star"></div>
-                                        </div>
-                                        <div class="star-container">
-                                            <div class="star"></div>
-                                        </div>
-                                        <div class="star-container">
-                                            <div class="star"></div>
-                                        </div>
-                                        <div class="star-container">
-                                            <div class="star"></div>
-                                        </div>
-                                        </div><p className="rating_length">(486391)</p>
-                                    </div>
-
-                                    <div> <span  className="subInforupee">₹499</span><span className="subInfooldmrp"> <del> ₹3099</del></span></div>
-                                    <button className="bestsellerbtn">Bestseller</button>
-                                </div>
-
-                                <div className="subInfo">
-                                    <img className="subInfoimg" src="https://img-c.udemycdn.com/course/240x135/950390_270f_3.jpg" alt="Homeimage" />
-                                    <h3 className="subInfoH3">Machine Learning A-Z™: AI, Python & R + ChatGPT Bonus</h3>
-                                    <p className="subInfoP">Jose Potilla</p>
-                                    <div className="subInfoRating">
-                                    <div class="rating">
-                                        <div class="star-container">
-                                            <div class="star half"></div>
-                                        </div>
-                                        <div class="star-container">
-                                            <div class="star"></div>
-                                        </div>
-                                        <div class="star-container">
-                                            <div class="star"></div>
-                                        </div>
-                                        <div class="star-container">
-                                            <div class="star"></div>
-                                        </div>
-                                        <div class="star-container">
-                                            <div class="star"></div>
-                                        </div>
-                                        </div><p className="rating_length">(486391)</p>
-                                    </div>
-
-                                    <div> <span  className="subInforupee">₹499</span><span className="subInfooldmrp"> <del> ₹3099</del></span></div>
-                                    <button className="bestsellerbtn">Bestseller</button>
-                                </div>
-
-                                <div className="subInfo">
-                                    <img className="subInfoimg" src="https://img-c.udemycdn.com/course/240x135/903744_8eb2.jpg" alt="Homeimage" />
-                                    <h3 className="subInfoH3">Learn Python Programming Masterclass</h3>
-                                    <p className="subInfoP">Jose Potilla</p>
-                                    <div className="subInfoRating">
-                                    <div class="rating">
-                                        <div class="star-container">
-                                            <div class="star half"></div>
-                                        </div>
-                                        <div class="star-container">
-                                            <div class="star"></div>
-                                        </div>
-                                        <div class="star-container">
-                                            <div class="star"></div>
-                                        </div>
-                                        <div class="star-container">
-                                            <div class="star"></div>
-                                        </div>
-                                        <div class="star-container">
-                                            <div class="star"></div>
-                                        </div>
-                                        </div><p className="rating_length">(486391)</p>
-                                    </div> 
-
-                                    <div> <span  className="subInforupee">₹499</span><span className="subInfooldmrp"> <del> ₹3099</del></span></div>
-                                </div>
                         </div>
                     </div>
 
@@ -270,10 +195,28 @@ function Home() {
                     <div className="learners">
                             <h2>Learners are viewing</h2><br/>
                                 <div className="learners_A">
-                                    <div className="subInfo">
-                                        <img className="subInfoimg" src="https://d3f1iyfxxz8i1e.cloudfront.net/courses/course_image/467f496ef15a.jpg" alt="Homeimage" />
-                                        <h3 className="subInfoH3">The Complete 2023 Web Development Bootcamp</h3>
-                                        <p className="subInfoP">Jose Potilla</p>
+
+                            {Sdata.filter((item) => item.id % 80 === 0 || (item.subcategory === "product_M" && item.id % 2 === 0)).map((item, index) => {
+                                return(<>
+                            
+                                    <div className="subInfo dropdown" key={index} onMouseEnter={() => handleHoverDropdownToggle(index)} onMouseLeave={() => handleHoverDropdownToggle(index)}>
+                                                {isHoverVisible[index] && (
+                                                        <div className="dropdown-myProfile byaddcart byhome">
+                                                                <div className="Addcart1">
+                                                                        <h4>{item.name}</h4>
+                                                                        <div className="Addcartmini">
+                                                                            <button className="bestsellerbtn">Bestseller</button>
+                                                                            <p className="Addcartmini_update">Updated November 2023</p>
+                                                                        </div><br/>    
+                                                                        <p>{item.discr}</p>
+                                                                </div>  
+                                                                <hr/><br/>
+                                                                <AddCardBtn product={item}/>
+                                                            </div>
+                                                        )}
+                                        <img className="subInfoimg" src={item.image} alt="Homeimage" />
+                                        <h3 className="subInfoH3">{item.name}</h3>
+                                        <p className="subInfoP">{item.Wname}</p>
                                         <div className="subInfoRating">
                                         <div class="rating">
                                             <div class="star-container">
@@ -294,121 +237,11 @@ function Home() {
                                             </div><p className="rating_length">(486391)</p>
                                         </div>
 
-                                        <div> <span  className="subInforupee">₹499</span><span className="subInfooldmrp"> <del> ₹3099</del></span></div>
+                                        <div> <span  className="subInforupee">₹{item.price}</span><span className="subInfooldmrp"> <del> ₹{item.oldprice}</del></span></div>
                                         <button className="bestsellerbtn">Bestseller</button>
                                     </div>
-
-                                    <div className="subInfo">
-                                        <img className="subInfoimg" src="https://img-c.udemycdn.com/course/240x135/950390_270f_3.jpg" alt="Homeimage" />
-                                        <h3 className="subInfoH3">The Complete Python Bootcamp From Zero to Hero in Python</h3>
-                                        <p className="subInfoP">Jose Potilla</p>
-                                        <div className="subInfoRating">
-                                        <div class="rating">
-                                            <div class="star-container">
-                                                <div class="star half"></div>
-                                            </div>
-                                            <div class="star-container">
-                                                <div class="star"></div>
-                                            </div>
-                                            <div class="star-container">
-                                                <div class="star"></div>
-                                            </div>
-                                            <div class="star-container">
-                                                <div class="star"></div>
-                                            </div>
-                                            <div class="star-container">
-                                                <div class="star"></div>
-                                            </div>
-                                            </div><p className="rating_length">(486391)</p>
-                                        </div>
-
-                                        <div> <span  className="subInforupee">₹499</span><span className="subInfooldmrp"> <del> ₹3099</del></span></div>
-                                        <button className="bestsellerbtn">Bestseller</button>
-                                    </div>
-
-                                    <div className="subInfo">
-                                        <img className="subInfoimg" src="https://img-c.udemycdn.com/course/240x135/851712_fc61_6.jpg" alt="Homeimage" />
-                                        <h3 className="subInfoH3">The Complete JavaScript Course 2024: From Zero to Expert!</h3>
-                                        <p className="subInfoP">Jose Potilla</p>
-                                        <div className="subInfoRating">
-                                        <div class="rating">
-                                            <div class="star-container">
-                                                <div class="star half"></div>
-                                            </div>
-                                            <div class="star-container">
-                                                <div class="star"></div>
-                                            </div>
-                                            <div class="star-container">
-                                                <div class="star"></div>
-                                            </div>
-                                            <div class="star-container">
-                                                <div class="star"></div>
-                                            </div>
-                                            <div class="star-container">
-                                                <div class="star"></div>
-                                            </div>
-                                            </div><p className="rating_length">(486391)</p>
-                                        </div>
-
-                                        <div> <span  className="subInforupee">₹499</span><span className="subInfooldmrp"> <del> ₹3099</del></span></div>
-                                        <button className="bestsellerbtn">Bestseller</button>
-                                    </div>
-
-                                    <div className="subInfo">
-                                        <img className="subInfoimg" src="https://img-c.udemycdn.com/course/240x135/1362070_b9a1_2.jpg" alt="Homeimage" />
-                                        <h3 className="subInfoH3">React - The Complete Guide 2023 (incl. React Router & Redux)</h3>
-                                        <p className="subInfoP">Jose Potilla</p>
-                                        <div className="subInfoRating">
-                                        <div class="rating">
-                                            <div class="star-container">
-                                                <div class="star half"></div>
-                                            </div>
-                                            <div class="star-container">
-                                                <div class="star"></div>
-                                            </div>
-                                            <div class="star-container">
-                                                <div class="star"></div>
-                                            </div>
-                                            <div class="star-container">
-                                                <div class="star"></div>
-                                            </div>
-                                            <div class="star-container">
-                                                <div class="star"></div>
-                                            </div>
-                                            </div><p className="rating_length">(486391)</p>
-                                        </div>
-
-                                        <div> <span  className="subInforupee">₹499</span><span className="subInfooldmrp"> <del> ₹3099</del></span></div>
-                                        <button className="bestsellerbtn">Bestseller</button>
-                                    </div>
-
-                                    <div className="subInfo">
-                                        <img className="subInfoimg" src="	https://img-c.udemycdn.com/course/240x135/793796_0e89_2.jpg" alt="Homeimage" />
-                                        <h3 className="subInfoH3">Microsoft Excel - Excel from Beginner to Advanced</h3>
-                                        <p className="subInfoP">Jose Potilla</p>
-                                        <div className="subInfoRating">
-                                        <div class="rating">
-                                            <div class="star-container">
-                                                <div class="star half"></div>
-                                            </div>
-                                            <div class="star-container">
-                                                <div class="star"></div>
-                                            </div>
-                                            <div class="star-container">
-                                                <div class="star"></div>
-                                            </div>
-                                            <div class="star-container">
-                                                <div class="star"></div>
-                                            </div>
-                                            <div class="star-container">
-                                                <div class="star"></div>
-                                            </div>
-                                            </div><p className="rating_length">(486391)</p>
-                                        </div>
-
-                                        <div> <span  className="subInforupee">₹499</span><span className="subInfooldmrp"> <del> ₹3099</del></span></div>
-                                        <button className="bestsellerbtn">Bestseller</button>
-                                    </div>
+                                    </>)
+                            })}        
                             </div>    
                     </div><br/><br/>
                     

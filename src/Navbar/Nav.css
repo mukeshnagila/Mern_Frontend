@@ -516,6 +516,12 @@
         border: none;
       }
 
+      .dropdown-myProfile {
+        width: 260px;
+        margin-top: 30%;
+        right: 16%;
+    }
+
 } 
 
 

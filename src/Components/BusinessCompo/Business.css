@@ -318,7 +318,7 @@
     }
 
     .popular_topic_Btn{
-        width: 160px;
+        width: 155px;
     }
 
     .popular_Ins_item{
@@ -443,6 +443,10 @@
 
     .forBLast_content{
         width: 100%;
+    }
+    
+    .Nav2nd_img{
+        padding: 0%;
     }
 
 }

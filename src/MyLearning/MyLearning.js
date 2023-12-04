@@ -73,11 +73,23 @@ function MyLearning() {
                                             />
                                         </div>
 
-                                        <div className="forBLast_content_item2">
-                                            <h3>{order.products[0].name}</h3><br/>
-                                            <p>{order.products[0].discr}</p><br/>
+
+                                    <div className="forsearchprod">
+                                        <div className="forBLast_content_item2 formmimg">
+                                            <h3>{order.products[0].name}</h3>
+                                            <p>{order.products[0].discr}</p>
                                             <p className="forlastcolor">{order.products[0].Wname}</p>
-                                            <br />
+                                            
+                                            <p className="forlastcolor">1.5 total hours . 38 lectures . All Levels</p>
+                                        </div>
+                                    </div>
+
+
+                                        <div className="forBLast_content_item2 blockserchp">
+                                            <h3>{order.products[0].name}</h3>
+                                            <p>{order.products[0].discr}</p>
+                                            <p className="forlastcolor">{order.products[0].Wname}</p>
+                                            
                                             <p className="forlastcolor">1.5 total hours . 38 lectures . All Levels</p>
                                         </div>
 

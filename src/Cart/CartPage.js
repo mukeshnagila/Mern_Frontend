@@ -202,7 +202,7 @@ function CartPage() {
                                     <>      
                                         <div className="for_Cart_page" key={item.id}>
                                             <div className="forBLast_content_item1">
-                                                    <img className="forshopcart_Img" src={item.image} alt="FinanceAccountingimage" />
+                                                    <img className="forshopcart_Img cartimage5" src={item.image} alt="FinanceAccountingimage" />
                                             </div>
 
                                                 <div className="for_Cart_page2">

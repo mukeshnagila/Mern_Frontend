@@ -108,7 +108,16 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     text-align: center;
     padding-top: 10%;
-    background-image: url("https://cdn.dribbble.com/users/5107895/screenshots/14532312/media/a7e6c2e9333d0989e3a54c95dd8321d7.gif");
+    background-image: url("https://s.udemycdn.com/browse_components/flyout/empty-shopping-cart-v2.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* background-image: url("https://cdn.dribbble.com/users/5107895/screenshots/14532312/media/a7e6c2e9333d0989e3a54c95dd8321d7.gif"); */
+}
+
+.dropdown-myProfile {
+    width: 260px;
+    margin-top: 15%;
+    right: 16%;
 }
 
 
@@ -153,6 +162,10 @@
 
     .shopCart1 {
         margin-bottom: 8%;
+    }
+
+    .cartimage5{
+        width: 100%;
     }
 
 }

@@ -255,7 +255,21 @@ function Mtecn(){
                                             <img className="forBLast_content_item1_Img" src={item.image} alt="HumanRimage" />
                                     </div>
 
-                                        <div className="forBLast_content_item2">
+                                    <div className="forBLast_content_item2 dropdown" key={index} onMouseEnter={() => handleHoverDropdownToggle(index)} onMouseLeave={() => handleHoverDropdownToggle(index)}>
+                                                {isHoverVisible[index] && (
+                                                        <div className="dropdown-myProfile byaddcart">
+                                                                <div className="Addcart1">
+                                                                        <h4>{item.name}</h4>
+                                                                        <div className="Addcartmini">
+                                                                            <button className="bestsellerbtn">Bestseller</button>
+                                                                            <p className="Addcartmini_update">Updated November 2023</p>
+                                                                        </div><br/>    
+                                                                        <p>{item.discr}</p>
+                                                                </div>  
+                                                                <hr/><br/>
+                                                                <AddCardBtn product={item}/>
+                                                            </div>
+                                                        )}
                                             <h3>{item.name}</h3>
                                             <p>{item.discr}</p><br/>
                                             <p className="forlastcolor">{item.Wname}</p>

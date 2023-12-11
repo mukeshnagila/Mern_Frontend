@@ -47,7 +47,7 @@ function Nav(){
         //   console.log("Token:", token);  
           if (token) {
             try {
-              const response = await fetch("https://ecommerce-project-8m5d.onrender.com/api/finduser", {
+              const response = await fetch("https://mern-udemy-clone-backend.onrender.com/api/finduser", {
                 // const response = await fetch("http://localhost:8008/api/finduser", {
                 headers: {
                   Authorization: `Bearer ${token}`,

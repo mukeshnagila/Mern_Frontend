@@ -44,11 +44,11 @@ function Nav(){
     useEffect(() => {
         const fetchUserData = async () => {
           const token = localStorage.getItem("token");
-          console.log("Token:", token);  
+        //   console.log("Token:", token);  
           if (token) {
             try {
-            //   const response = await fetch("https://ecommerce-project-8m5d.onrender.com/api/finduser", {
-                const response = await fetch("http://localhost:8008/api/finduser", {
+              const response = await fetch("https://ecommerce-project-8m5d.onrender.com/api/finduser", {
+                // const response = await fetch("http://localhost:8008/api/finduser", {
                 headers: {
                   Authorization: `Bearer ${token}`,
                 },
@@ -95,8 +95,8 @@ function Nav(){
             // const response = await axios.get(`http://localhost:8008/api/search?searchItem=${searchItem}`);
             const response = await axios.get(`https://mern-udemy-clone-backend.onrender.com/api/search?searchItem=${searchItem}`);
             const searchData = response.data;
-            console.log(response.data);
-            console.log(searchData.length);
+            // console.log(response.data);
+            // console.log(searchData.length);
             if (searchData.length === 0) {
                 alert("Results not found!");
                 setSearchItem("");

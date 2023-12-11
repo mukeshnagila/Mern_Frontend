@@ -92,7 +92,8 @@ function Nav(){
           }
 
         try {
-            const response = await axios.get(`http://localhost:8008/api/search?searchItem=${searchItem}`);
+            // const response = await axios.get(`http://localhost:8008/api/search?searchItem=${searchItem}`);
+            const response = await axios.get(`https://mern-udemy-clone-backend.onrender.com/api/search?searchItem=${searchItem}`);
             const searchData = response.data;
             console.log(response.data);
             console.log(searchData.length);

@@ -10,7 +10,7 @@ function SearchProduct() {
     
     const location = useLocation();
     const searchData = location.state ? location.state.searchData : [];
-    console.log("values:", searchData);
+    // console.log("values:", searchData);
     
     const [isHoverVisible, setIsHoverVisible] = useState(Array(Sdata.length).fill(false));
     
